@@ -1,0 +1,175 @@
+/*
+ * Copyright 2017-2020 original authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.microchatbots.telegrambots.core;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import edu.umd.cs.findbugs.annotations.NonNull;
+import edu.umd.cs.findbugs.annotations.Nullable;
+import io.micronaut.core.annotation.Introspected;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+/**
+ * This object represents an audio file to be treated as music by the Telegram clients.
+ * @see <a href="https://core.telegram.org/bots/api#audio">Audio</a>
+ */
+@Introspected
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Audio {
+
+    /**
+     * Identifier for this file
+     */
+    @JsonProperty("file_id")
+    @NotBlank
+    @NonNull
+    private String fileId;
+
+    /**
+     * Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
+    @JsonProperty("file_unique_id")
+    @NotBlank
+    @NonNull
+    private String fileUniqueId;
+
+    /**
+     * Duration of the audio in seconds as defined by sender
+     */
+    @NonNull
+    @NotNull
+    private Integer duration;
+
+    /**
+     * Performer of the audio as defined by sender or by audio tags.
+     */
+    @Nullable
+    private String performer;
+
+    /**
+     * Title of the audio as defined by sender or by audio tags.
+     */
+    @Nullable
+    private String title;
+
+    /**
+     * MIME type of the file as defined by sender.
+     */
+    @Nullable
+    @JsonProperty("mime_type")
+    private String mimeType;
+
+    @Nullable
+    @JsonProperty("file_size")
+    private Integer fileSize;
+
+    /**
+     * Thumbnail of the album cover to which the music file belongs.
+     */
+    @Nullable
+    private PhotoSize thumb;
+
+    public Audio() {
+    }
+
+    @NonNull
+    public String getFileId() {
+        return fileId;
+    }
+
+    public void setFileId(@NonNull String fileId) {
+        this.fileId = fileId;
+    }
+
+    @NonNull
+    public String getFileUniqueId() {
+        return fileUniqueId;
+    }
+
+    public void setFileUniqueId(@NonNull String fileUniqueId) {
+        this.fileUniqueId = fileUniqueId;
+    }
+
+    @NonNull
+    public Integer getDuration() {
+        return duration;
+    }
+
+    public void setDuration(@NonNull Integer duration) {
+        this.duration = duration;
+    }
+
+    @Nullable
+    public String getPerformer() {
+        return performer;
+    }
+
+    public void setPerformer(@Nullable String performer) {
+        this.performer = performer;
+    }
+
+    @Nullable
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(@Nullable String title) {
+        this.title = title;
+    }
+
+    @Nullable
+    public String getMimeType() {
+        return mimeType;
+    }
+
+    public void setMimeType(@Nullable String mimeType) {
+        this.mimeType = mimeType;
+    }
+
+    @Nullable
+    public Integer getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(@Nullable Integer fileSize) {
+        this.fileSize = fileSize;
+    }
+
+    @Nullable
+    public PhotoSize getThumb() {
+        return thumb;
+    }
+
+    public void setThumb(@Nullable PhotoSize thumb) {
+        this.thumb = thumb;
+    }
+
+    @Override
+    public String toString() {
+        return "Audio{" +
+                "fileId='" + fileId + '\'' +
+                ", fileUniqueId='" + fileUniqueId + '\'' +
+                ", duration=" + duration +
+                ", performer='" + performer + '\'' +
+                ", title='" + title + '\'' +
+                ", mimeType='" + mimeType + '\'' +
+                ", fileSize=" + fileSize +
+                ", thumb=" + (thumb != null ? thumb.toString() : "") +
+                '}';
+    }
+}
