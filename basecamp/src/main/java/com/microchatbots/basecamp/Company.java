@@ -25,11 +25,15 @@ import io.micronaut.core.annotation.Introspected;
 @Introspected
 public class Company {
     /**
-     * Company Unique identifier
+     * Company Unique identifier.
      */
     private Long id;
+
     private String name;
 
+    /**
+     * Constructor.
+     */
     public Company() {
     }
 
