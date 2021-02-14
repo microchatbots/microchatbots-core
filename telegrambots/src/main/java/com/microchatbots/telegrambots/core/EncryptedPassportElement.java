@@ -90,7 +90,7 @@ public class EncryptedPassportElement {
     List<PassportFile> translation;
 
     /**
-     * Base64-encoded element hash for using in PassportElementErrorUnspecified
+     * Base64-encoded element hash for using in PassportElementErrorUnspecified.
      */
     @NotBlank
     @NonNull

@@ -69,29 +69,61 @@ public interface TelegramBotApi {
 
     /**
      * Use this method to remove webhook integration if you decide to switch back to getUpdates.
+     * @param token Token
      * @return Returns True on success.
      */
     Flowable<TelegramApiResponse> deleteWebhook(@PathVariable @NonNull @NotBlank String token);
 
     /**
      * Use this method to get current webhook status. Requires no parameters.
+     * @param token Token
      * @see <a href="https://core.telegram.org/bots/api#getwebhookinfo">getWebhookInfo</a>
      * @return On success, returns a WebhookInfo object. If the bot is using getUpdates, will return an object with the url field empty.
      */
     Flowable<WebhookInfo> getWebhookInfo(@PathVariable @NonNull @NotBlank String token);
 
+    /**
+     *
+     * @param token Token
+     * @param sendPhoto Send Photo
+     * @return Message
+     */
     Flowable<Message> sendPhoto(@PathVariable @NonNull @NotBlank String token,
                                 @NonNull @NotNull @Valid @Body SendPhoto sendPhoto);
 
+    /**
+     *
+     * @param token Token
+     * @param sendAudio Send Audio
+     * @return Message
+     */
     Flowable<Message> sendAudio(@PathVariable @NonNull @NotBlank String token,
                                 @NonNull @NotNull @Valid @Body SendAudio sendAudio);
 
+    /**
+     *
+     * @param token Token
+     * @param sendVideo SendVideo
+     * @return Message
+     */
     Flowable<Message> sendVideo(@PathVariable @NonNull @NotBlank String token,
                                 @NonNull @NotNull @Valid @Body SendVideo sendVideo);
 
+    /**
+     *
+     * @param token Token
+     * @param sendAnimation SendAnimatin
+     * @return Message
+     */
     Flowable<Message> sendAnimation(@PathVariable @NonNull @NotBlank String token,
                                     @NonNull @NotNull @Valid @Body SendAnimation sendAnimation);
 
+    /**
+     *
+     * @param token Token
+     * @param sendLocation SendLocation
+     * @return Message
+     */
     Flowable<Message> sendLocation(@PathVariable @NonNull @NotBlank String token,
                                    @NonNull @NotNull @Valid @Body SendLocation sendLocation);
 }

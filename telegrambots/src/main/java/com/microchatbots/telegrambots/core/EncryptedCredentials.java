@@ -43,7 +43,7 @@ public class EncryptedCredentials {
     private String hash;
 
     /**
-     * Base64-encoded secret, encrypted with the bot's public RSA key, required for data decryption
+     * Base64-encoded secret, encrypted with the bot's public RSA key, required for data decryption.
      */
     @NonNull
     @NotBlank

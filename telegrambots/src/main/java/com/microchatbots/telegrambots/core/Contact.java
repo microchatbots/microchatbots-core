@@ -55,7 +55,7 @@ public class Contact {
     private String lastName;
 
     /**
-     * Contact's user identifier in Telegram
+     * Contact's user identifier in Telegram.
      */
     @Nullable
     @JsonProperty("user_id")
