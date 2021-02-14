@@ -41,18 +41,34 @@ public class PassportData {
     public PassportData() {
     }
 
+    /**
+     *
+     * @return Array with information about documents and other Telegram Passport elements that was shared with the bot.
+     */
     public List<EncryptedPassportElement> getData() {
         return data;
     }
 
+    /**
+     *
+     * @param data Array with information about documents and other Telegram Passport elements that was shared with the bot.
+     */
     public void setData(List<EncryptedPassportElement> data) {
         this.data = data;
     }
 
+    /**
+     *
+     * @return Encrypted credentials required to decrypt the data.
+     */
     public EncryptedCredentials getCredentials() {
         return credentials;
     }
 
+    /**
+     *
+     * @param credentials Encrypted credentials required to decrypt the data.
+     */
     public void setCredentials(EncryptedCredentials credentials) {
         this.credentials = credentials;
     }

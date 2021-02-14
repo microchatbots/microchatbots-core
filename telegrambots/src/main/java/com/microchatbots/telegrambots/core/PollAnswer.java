@@ -59,29 +59,53 @@ public class PollAnswer {
     public PollAnswer() {
     }
 
+    /**
+     *
+     * @return Unique poll identifier.
+     */
     @NonNull
     public String getPollId() {
         return pollId;
     }
 
+    /**
+     *
+     * @param pollId Unique poll identifier.
+     */
     public void setPollId(@NonNull String pollId) {
         this.pollId = pollId;
     }
 
+    /**
+     *
+     * @return The user, who changed the answer to the poll.
+     */
     @NonNull
     public User getUser() {
         return user;
     }
 
+    /**
+     *
+     * @param user The user, who changed the answer to the poll.
+     */
     public void setUser(@NonNull User user) {
         this.user = user;
     }
 
+    /**
+     *
+     * @return 0-based identifiers of answer options, chosen by the user. May be empty if the user retracted their vote.
+     */
     @NonNull
     public List<Integer> getOptionIds() {
         return optionIds;
     }
 
+    /**
+     *
+     * @param optionIds 0-based identifiers of answer options, chosen by the user. May be empty if the user retracted their vote.
+     */
     public void setOptionIds(@NonNull List<Integer> optionIds) {
         this.optionIds = optionIds;
     }

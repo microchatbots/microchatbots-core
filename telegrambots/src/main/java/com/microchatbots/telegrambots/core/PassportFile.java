@@ -51,7 +51,6 @@ public class PassportFile {
     @JsonProperty("file_size;")
     private Integer fileSize;
 
-
     /**
      * Unix time when the file was uploaded.
      */
@@ -61,36 +60,68 @@ public class PassportFile {
     public PassportFile() {
     }
 
+    /**
+     *
+     * @return Identifier for this file, which can be used to download or reuse the file.
+     */
     @NonNull
     public String getFileId() {
         return fileId;
     }
 
+    /**
+     *
+     * @param fileId Identifier for this file, which can be used to download or reuse the file.
+     */
     public void setFileId(@NonNull String fileId) {
         this.fileId = fileId;
     }
 
+    /**
+     *
+     * @return Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     @NonNull
     public String getFileUniqueId() {
         return fileUniqueId;
     }
 
+    /**
+     *
+     * @param fileUniqueId Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     public void setFileUniqueId(@NonNull String fileUniqueId) {
         this.fileUniqueId = fileUniqueId;
     }
 
+    /**
+     *
+     * @return File size.
+     */
     public Integer getFileSize() {
         return fileSize;
     }
 
+    /**
+     *
+     * @param fileSize File size.
+     */
     public void setFileSize(Integer fileSize) {
         this.fileSize = fileSize;
     }
 
+    /**
+     *
+     * @return Unix time when the file was uploaded.
+     */
     public Integer getFileDate() {
         return fileDate;
     }
 
+    /**
+     *
+     * @param fileDate Unix time when the file was uploaded.
+     */
     public void setFileDate(Integer fileDate) {
         this.fileDate = fileDate;
     }

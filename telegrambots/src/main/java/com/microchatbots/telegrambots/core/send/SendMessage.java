@@ -33,7 +33,7 @@ public class SendMessage extends Send {
     public final static String METHOD_SENDMESSAGE = "sendMessage";
 
     /**
-     * Text of the message to be sent
+     * Text of the message to be sent.
      */
     @NonNull
     @NotBlank
@@ -59,29 +59,53 @@ public class SendMessage extends Send {
         super(METHOD_SENDMESSAGE);
     }
 
+    /**
+     *
+     * @return Text of the message to be sent.
+     */
     @NonNull
     public String getText() {
         return text;
     }
 
+    /**
+     *
+     * @param text Text of the message to be sent.
+     */
     public void setText(@NonNull String text) {
         this.text = text;
     }
 
+    /**
+     *
+     * @return Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     @Nullable
     public String getParseMode() {
         return parseMode;
     }
 
+    /**
+     *
+     * @param parseMode Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     public void setParseMode(@Nullable String parseMode) {
         this.parseMode = parseMode;
     }
 
+    /**
+     *
+     * @return Disables link previews for links in this message.
+     */
     @Nullable
     public Boolean getDisableWebPagePreview() {
         return disableWebPagePreview;
     }
 
+    /**
+     *
+     * @param disableWebPagePreview Disables link previews for links in this message.
+     */
     public void setDisableWebPagePreview(@Nullable Boolean disableWebPagePreview) {
         this.disableWebPagePreview = disableWebPagePreview;
     }

@@ -48,24 +48,39 @@ public class PollOption {
     public PollOption() {
     }
 
+    /**
+     *
+     * @return Option text, 1-100 characters.
+     */
     @NonNull
     public String getText() {
         return text;
     }
 
+    /**
+     *
+     * @param text Option text, 1-100 characters.
+     */
     public void setText(@NonNull String text) {
         this.text = text;
     }
 
+    /**
+     *
+     * @return Number of users that voted for this option
+     */
     @NonNull
     public Integer getVoterCount() {
         return voterCount;
     }
 
+    /**
+     *
+     * @param voterCount Number of users that voted for this option
+     */
     public void setVoterCount(@NonNull Integer voterCount) {
         this.voterCount = voterCount;
     }
-
 
     @Override
     public String toString() {

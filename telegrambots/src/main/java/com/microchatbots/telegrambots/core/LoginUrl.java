@@ -64,38 +64,70 @@ public class LoginUrl {
     public LoginUrl() {
     }
 
+    /**
+     *
+     * @return An HTTP URL to be opened with user authorization data added to the query string when the button is pressed.
+     */
     @NonNull
     public String getUrl() {
         return url;
     }
 
+    /**
+     *
+     * @param url An HTTP URL to be opened with user authorization data added to the query string when the button is pressed.
+     */
     public void setUrl(@NonNull String url) {
         this.url = url;
     }
 
+    /**
+     *
+     * @return New text of the button in forwarded messages.
+     */
     @Nullable
     public String getForwardText() {
         return forwardText;
     }
 
+    /**
+     *
+     * @param forwardText New text of the button in forwarded messages.
+     */
     public void setForwardText(@Nullable String forwardText) {
         this.forwardText = forwardText;
     }
 
+    /**
+     *
+     * @return Username of a bot, which will be used for user authorization.
+     */
     @Nullable
     public String getBotUsername() {
         return botUsername;
     }
 
+    /**
+     *
+     * @param botUsername Username of a bot, which will be used for user authorization.
+     */
     public void setBotUsername(@Nullable String botUsername) {
         this.botUsername = botUsername;
     }
 
+    /**
+     *
+     * @return Pass True to request the permission for your bot to send messages to the user.
+     */
     @Nullable
     public Boolean getRequestWriteAccess() {
         return requestWriteAccess;
     }
 
+    /**
+     *
+     * @param requestWriteAccess Pass True to request the permission for your bot to send messages to the user.
+     */
     public void setRequestWriteAccess(@Nullable Boolean requestWriteAccess) {
         this.requestWriteAccess = requestWriteAccess;
     }

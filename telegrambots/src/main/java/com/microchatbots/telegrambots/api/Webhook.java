@@ -65,29 +65,53 @@ public class Webhook {
     public Webhook() {
     }
 
+    /**
+     *
+     * @return HTTPS url to send updates to. Use an empty string to remove webhook integration
+     */
     @NonNull
     public String getUrl() {
         return url;
     }
 
+    /**
+     *
+     * @param url HTTPS url to send updates to. Use an empty string to remove webhook integration
+     */
     public void setUrl(@NonNull String url) {
         this.url = url;
     }
 
+    /**
+     *
+     * @return Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100.
+     */
     @Nullable
     public Integer getMaxConnections() {
         return maxConnections;
     }
 
+    /**
+     *
+     * @param maxConnections Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100.
+     */
     public void setMaxConnections(@Nullable Integer maxConnections) {
         this.maxConnections = maxConnections;
     }
 
+    /**
+     *
+     * @return A JSON-serialized list of the update types you want your bot to receive
+     */
     @Nullable
     public List<String> getAllowedUpdated() {
         return allowedUpdated;
     }
 
+    /**
+     *
+     * @param allowedUpdated A JSON-serialized list of the update types you want your bot to receive
+     */
     public void setAllowedUpdated(@Nullable List<String> allowedUpdated) {
         this.allowedUpdated = allowedUpdated;
     }

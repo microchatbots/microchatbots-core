@@ -41,7 +41,7 @@ public class UserProfilePhotos {
     private Integer totalCount;
 
     /**
-     * Array of PhotoSize	Requested profile pictures (in up to 4 sizes each)
+     * Array of PhotoSize Requested profile pictures (in up to 4 sizes each).
      */
     @NonNull
     @NotNull
@@ -50,20 +50,36 @@ public class UserProfilePhotos {
     public UserProfilePhotos() {
     }
 
+    /**
+     *
+     * @return Total number of profile pictures the target user has.
+     */
     @NonNull
     public Integer getTotalCount() {
         return totalCount;
     }
 
+    /**
+     *
+     * @param totalCount Total number of profile pictures the target user has.
+     */
     public void setTotalCount(@NonNull Integer totalCount) {
         this.totalCount = totalCount;
     }
 
+    /**
+     *
+     * @return Array of PhotoSize Requested profile pictures (in up to 4 sizes each)
+     */
     @NonNull
     public List<List<PhotoSize>> getPhotos() {
         return photos;
     }
 
+    /**
+     *
+     * @param photos Array of PhotoSize Requested profile pictures (in up to 4 sizes each)
+     */
     public void setPhotos(@NonNull List<List<PhotoSize>> photos) {
         this.photos = photos;
     }

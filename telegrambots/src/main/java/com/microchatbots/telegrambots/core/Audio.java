@@ -189,20 +189,36 @@ public class Audio {
         this.mimeType = mimeType;
     }
 
+    /**
+     *
+     * @return File size
+     */
     @Nullable
     public Integer getFileSize() {
         return fileSize;
     }
 
+    /**
+     *
+     * @param fileSize File size
+     */
     public void setFileSize(@Nullable Integer fileSize) {
         this.fileSize = fileSize;
     }
 
+    /**
+     *
+     * @return Thumbnail of the album cover to which the music file belongs.
+     */
     @Nullable
     public PhotoSize getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Thumbnail of the album cover to which the music file belongs.
+     */
     public void setThumb(@Nullable PhotoSize thumb) {
         this.thumb = thumb;
     }

@@ -37,7 +37,7 @@ public class Location {
     private Float longitude;
 
     /**
-     * Latitude as defined by sender
+     * Latitude as defined by sender.
      */
     @NonNull
     @NotNull
@@ -46,20 +46,36 @@ public class Location {
     public Location() {
     }
 
+    /**
+     *
+     * @return Longitude as defined by sender.
+     */
     @NonNull
     public Float getLongitude() {
         return longitude;
     }
 
+    /**
+     *
+     * @param longitude Longitude as defined by sender.
+     */
     public void setLongitude(@NonNull Float longitude) {
         this.longitude = longitude;
     }
 
+    /**
+     *
+     * @return Latitude as defined by sender.
+     */
     @NonNull
     public Float getLatitude() {
         return latitude;
     }
 
+    /**
+     *
+     * @param latitude Latitude as defined by sender.
+     */
     public void setLatitude(@NonNull Float latitude) {
         this.latitude = latitude;
     }

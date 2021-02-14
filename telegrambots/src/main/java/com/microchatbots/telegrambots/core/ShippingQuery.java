@@ -66,38 +66,70 @@ public class ShippingQuery {
     public ShippingQuery() {
     }
 
+    /**
+     *
+     * @return Unique query identifier.
+     */
     @NonNull
     public String getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id Unique query identifier.
+     */
     public void setId(@NonNull String id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return User who sent the query.
+     */
     @NonNull
     public User getFrom() {
         return from;
     }
 
+    /**
+     *
+     * @param from User who sent the query.
+     */
     public void setFrom(@NonNull User from) {
         this.from = from;
     }
 
+    /**
+     *
+     * @return Bot specified invoice payload.
+     */
     @NonNull
     public String getInvoicePayload() {
         return invoicePayload;
     }
 
+    /**
+     *
+     * @param invoicePayload Bot specified invoice payload.
+     */
     public void setInvoicePayload(@NonNull String invoicePayload) {
         this.invoicePayload = invoicePayload;
     }
 
+    /**
+     *
+     * @return User specified shipping address.
+     */
     @NonNull
     public ShippingAddress getShippingAddress() {
         return shippingAddress;
     }
 
+    /**
+     *
+     * @param shippingAddress User specified shipping address.
+     */
     public void setShippingAddress(@NonNull ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
