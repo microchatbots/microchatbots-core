@@ -50,29 +50,53 @@ public class InputMediaAnimation extends InputMediaDocument {
         super(TYPE_ANIMATION);
     }
 
+    /**
+     *
+     * @return Animation width.
+     */
     @Nullable
     public Integer getWidth() {
         return width;
     }
 
+    /**
+     *
+     * @param width Animation width.
+     */
     public void setWidth(@Nullable Integer width) {
         this.width = width;
     }
 
+    /**
+     *
+     * @return Animation height.
+     */
     @Nullable
     public Integer getHeight() {
         return height;
     }
 
+    /**
+     *
+     * @param height Animation height.
+     */
     public void setHeight(@Nullable Integer height) {
         this.height = height;
     }
 
+    /**
+     *
+     * @return Animation duration.
+     */
     @Nullable
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Animation duration.
+     */
     public void setDuration(@Nullable Integer duration) {
         this.duration = duration;
     }

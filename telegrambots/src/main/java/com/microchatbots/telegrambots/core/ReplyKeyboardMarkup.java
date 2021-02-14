@@ -64,38 +64,70 @@ public class ReplyKeyboardMarkup {
     public ReplyKeyboardMarkup() {
     }
 
+    /**
+     *
+     * @return Array of button rows, each represented by an Array of KeyboardButton objects.
+     */
     @NonNull
     public List<KeyboardButton> getKeyboard() {
         return keyboard;
     }
 
+    /**
+     *
+     * @param keyboard Array of button rows, each represented by an Array of KeyboardButton objects.
+     */
     public void setKeyboard(@NonNull List<KeyboardButton> keyboard) {
         this.keyboard = keyboard;
     }
 
+    /**
+     *
+     * @return Requests clients to resize the keyboard vertically for optimal fit
+     */
     @Nullable
     public Boolean getResizeKeyboard() {
         return resizeKeyboard;
     }
 
+    /**
+     *
+     * @param resizeKeyboard Requests clients to resize the keyboard vertically for optimal fit
+     */
     public void setResizeKeyboard(@Nullable Boolean resizeKeyboard) {
         this.resizeKeyboard = resizeKeyboard;
     }
 
+    /**
+     *
+     * @return Requests clients to hide the keyboard as soon as it's been used.
+     */
     @Nullable
     public Boolean getOneTimeKeyboard() {
         return oneTimeKeyboard;
     }
 
+    /**
+     *
+     * @param oneTimeKeyboard Requests clients to hide the keyboard as soon as it's been used.
+     */
     public void setOneTimeKeyboard(@Nullable Boolean oneTimeKeyboard) {
         this.oneTimeKeyboard = oneTimeKeyboard;
     }
 
+    /**
+     *
+     * @return Use this parameter if you want to show the keyboard to specific users only.
+     */
     @Nullable
     public Boolean getSelective() {
         return selective;
     }
 
+    /**
+     *
+     * @param selective Use this parameter if you want to show the keyboard to specific users only.
+     */
     public void setSelective(@Nullable Boolean selective) {
         this.selective = selective;
     }

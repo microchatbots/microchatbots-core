@@ -28,7 +28,6 @@ import edu.umd.cs.findbugs.annotations.Nullable;
 public class InputMediaAudio extends InputMediaDocument {
     private static final String TYPE_AUDIO = "audio";
 
-
     /**
      * Duration of the audio in seconds.
      */
@@ -42,7 +41,7 @@ public class InputMediaAudio extends InputMediaDocument {
     private String performer;
 
     /**
-     * Title of the audio
+     * Title of the audio.
      */
     @Nullable
     private String title;
@@ -51,29 +50,53 @@ public class InputMediaAudio extends InputMediaDocument {
         super(TYPE_AUDIO);
     }
 
+    /**
+     *
+     * @return Duration of the audio in seconds.
+     */
     @Nullable
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Duration of the audio in seconds.
+     */
     public void setDuration(@Nullable Integer duration) {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return Performer of the audio.
+     */
     @Nullable
     public String getPerformer() {
         return performer;
     }
 
+    /**
+     *
+     * @param performer Performer of the audio.
+     */
     public void setPerformer(@Nullable String performer) {
         this.performer = performer;
     }
 
+    /**
+     *
+     * @return Title of the audio
+     */
     @Nullable
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title Title of the audio
+     */
     public void setTitle(@Nullable String title) {
         this.title = title;
     }

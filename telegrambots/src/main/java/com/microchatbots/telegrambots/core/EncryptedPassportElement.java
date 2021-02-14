@@ -19,7 +19,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import io.micronaut.core.annotation.Introspected;
-
 import edu.umd.cs.findbugs.annotations.Nullable;
 import javax.validation.constraints.NotBlank;
 import java.util.List;
@@ -46,14 +45,14 @@ public class EncryptedPassportElement {
     private String data;
 
     /**
-     * User's verified phone number, available only for “phone_number” type
+     * User's verified phone number, available only for “phone_number” type.
       */
     @Nullable
     @JsonProperty("phone_number")
     private String phoneNumber;
 
     /**
-     * User's verified email address, available only for “email” type
+     * User's verified email address, available only for “email” type.
      */
     @Nullable
     private String email;
@@ -91,7 +90,7 @@ public class EncryptedPassportElement {
     List<PassportFile> translation;
 
     /**
-     * String	Base64-encoded element hash for using in PassportElementErrorUnspecified
+     * Base64-encoded element hash for using in PassportElementErrorUnspecified
      */
     @NotBlank
     @NonNull
@@ -100,92 +99,172 @@ public class EncryptedPassportElement {
     public EncryptedPassportElement() {
     }
 
+    /**
+     *
+     * @return Element type
+     */
     @NonNull
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type Element type
+     */
     public void setType(@NonNull String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return Base64-encoded encrypted Telegram Passport element data provided by the user
+     */
     @Nullable
     public String getData() {
         return data;
     }
 
+    /**
+     *
+     * @param data Base64-encoded encrypted Telegram Passport element data provided by the user
+     */
     public void setData(@Nullable String data) {
         this.data = data;
     }
 
+    /**
+     *
+     * @return User's verified phone number, available only for “phone_number” type.
+     */
     @Nullable
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
+    /**
+     *
+     * @param phoneNumber User's verified phone number, available only for “phone_number” type
+     */
     public void setPhoneNumber(@Nullable String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
+    /**
+     *
+     * @return User's verified email address, available only for “email” type.
+     */
     @Nullable
     public String getEmail() {
         return email;
     }
 
+    /**
+     *
+     * @param email User's verified email address, available only for “email” type.
+     */
     public void setEmail(@Nullable String email) {
         this.email = email;
     }
 
+    /**
+     *
+     * @return Array of encrypted files with documents provided by the user
+     */
     @Nullable
     public List<PassportFile> getFiles() {
         return files;
     }
 
+    /**
+     *
+     * @param files Array of encrypted files with documents provided by the user
+     */
     public void setFiles(@Nullable List<PassportFile> files) {
         this.files = files;
     }
 
+    /**
+     *
+     * @return Encrypted file with the front side of the document, provided by the user.
+     */
     @Nullable
     public PassportFile getFrontSide() {
         return frontSide;
     }
 
+    /**
+     *
+     * @param frontSide Encrypted file with the front side of the document, provided by the user.
+     */
     public void setFrontSide(@Nullable PassportFile frontSide) {
         this.frontSide = frontSide;
     }
 
+    /**
+     *
+     * @return Encrypted file with the reverse side of the document, provided by the user.
+     */
     @Nullable
     public PassportFile getReverseSide() {
         return reverseSide;
     }
 
+    /**
+     *
+     * @param reverseSide Encrypted file with the reverse side of the document, provided by the user.
+     */
     public void setReverseSide(@Nullable PassportFile reverseSide) {
         this.reverseSide = reverseSide;
     }
 
+    /**
+     *
+     * @return Encrypted file with the selfie of the user holding a document, provided by the user;
+     */
     @Nullable
     public PassportFile getSelfie() {
         return selfie;
     }
 
+    /**
+     *
+     * @param selfie Encrypted file with the selfie of the user holding a document, provided by the user;
+     */
     public void setSelfie(@Nullable PassportFile selfie) {
         this.selfie = selfie;
     }
 
+    /**
+     *
+     * @return Array of encrypted files with translated versions of documents provided by the user.
+     */
     @Nullable
     public List<PassportFile> getTranslation() {
         return translation;
     }
 
+    /**
+     *
+     * @param translation Array of encrypted files with translated versions of documents provided by the user.
+     */
     public void setTranslation(@Nullable List<PassportFile> translation) {
         this.translation = translation;
     }
 
+    /**
+     *
+     * @return Base64-encoded element hash for using in PassportElementErrorUnspecified
+     */
     @NonNull
     public String getHash() {
         return hash;
     }
 
+    /**
+     *
+     * @param hash Base64-encoded element hash for using in PassportElementErrorUnspecified
+     */
     public void setHash(@NonNull String hash) {
         this.hash = hash;
     }

@@ -88,63 +88,119 @@ public class PreCheckoutQuery {
     public PreCheckoutQuery() {
     }
 
+    /**
+     *
+     * @return Unique query identifier.
+     */
     @NonNull
     public String getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id Unique query identifier.
+     */
     public void setId(@NonNull String id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return User who sent the query.
+     */
     @NonNull
     public User getFrom() {
         return from;
     }
 
+    /**
+     *
+     * @param from User who sent the query.
+     */
     public void setFrom(@NonNull User from) {
         this.from = from;
     }
 
+    /**
+     *
+     * @return Three-letter ISO 4217 currency code.
+     */
     @NonNull
     public String getCurrency() {
         return currency;
     }
 
+    /**
+     *
+     * @param currency Three-letter ISO 4217 currency code.
+     */
     public void setCurrency(@NonNull String currency) {
         this.currency = currency;
     }
 
+    /**
+     *
+     * @return Total price in the smallest units of the currency (integer, not float/double).
+     */
     @NonNull
     public Integer getTotalAmount() {
         return totalAmount;
     }
 
+    /**
+     *
+     * @param totalAmount Total price in the smallest units of the currency (integer, not float/double).
+     */
     public void setTotalAmount(@NonNull Integer totalAmount) {
         this.totalAmount = totalAmount;
     }
 
+    /**
+     *
+     * @return Bot specified invoice payload.
+     */
     @NonNull
     public String getInvoicePayload() {
         return invoicePayload;
     }
 
+    /**
+     *
+     * @param invoicePayload Bot specified invoice payload.
+     */
     public void setInvoicePayload(@NonNull String invoicePayload) {
         this.invoicePayload = invoicePayload;
     }
 
+    /**
+     *
+     * @return Identifier of the shipping option chosen by the user.
+     */
     public String getShippingOptionId() {
         return shippingOptionId;
     }
 
+    /**
+     *
+     * @param shippingOptionId Identifier of the shipping option chosen by the user.
+     */
     public void setShippingOptionId(String shippingOptionId) {
         this.shippingOptionId = shippingOptionId;
     }
 
+    /**
+     *
+     * @return Order info provided by the user.
+     */
     public OrderInfo getOrderInfo() {
         return orderInfo;
     }
 
+    /**
+     *
+     * @param orderInfo Order info provided by the user.
+     */
     public void setOrderInfo(OrderInfo orderInfo) {
         this.orderInfo = orderInfo;
     }

@@ -55,14 +55,14 @@ public class InlineQuery {
     private Location location;
 
     /**
-     * Text of the query (up to 512 characters)
+     * Text of the query (up to 512 characters).
      */
     @NonNull
     @NotBlank
     private String query;
 
     /**
-     * Offset of the results to be returned, can be controlled by the bot
+     * Offset of the results to be returned, can be controlled by the bot.
      */
     @NonNull
     @NotBlank
@@ -71,47 +71,87 @@ public class InlineQuery {
     public InlineQuery() {
     }
 
+    /**
+     *
+     * @return Unique identifier for this query.
+     */
     @NonNull
     public String getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id Unique identifier for this query.
+     */
     public void setId(@NonNull String id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return Sender.
+     */
     @NonNull
     public User getFrom() {
         return from;
     }
 
+    /**
+     *
+     * @param from Sender.
+     */
     public void setFrom(@NonNull User from) {
         this.from = from;
     }
 
+    /**
+     *
+     * @return Sender location, only for bots that request user location.
+     */
     @Nullable
     public Location getLocation() {
         return location;
     }
 
+    /**
+     *
+     * @param location Sender location, only for bots that request user location.
+     */
     public void setLocation(@Nullable Location location) {
         this.location = location;
     }
 
+    /**
+     *
+     * @return Text of the query (up to 512 characters).
+     */
     @NonNull
     public String getQuery() {
         return query;
     }
 
+    /**
+     *
+     * @param query Text of the query (up to 512 characters).
+     */
     public void setQuery(@NonNull String query) {
         this.query = query;
     }
 
+    /**
+     *
+     * @return Offset of the results to be returned, can be controlled by the bot.
+     */
     @NonNull
     public String getOffset() {
         return offset;
     }
 
+    /**
+     *
+     * @param offset Offset of the results to be returned, can be controlled by the bot.
+     */
     public void setOffset(@NonNull String offset) {
         this.offset = offset;
     }

@@ -49,7 +49,7 @@ public class OrderInfo {
     private String email;
 
     /**
-     *  User shipping address.
+     * User shipping address.
      */
     @Nullable
     @JsonProperty("shipping_address")
@@ -58,38 +58,70 @@ public class OrderInfo {
     public OrderInfo() {
     }
 
+    /**
+     *
+     * @return User name.
+     */
     @Nullable
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name User name.
+     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return User's phone number.
+     */
     @Nullable
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
+    /**
+     *
+     * @param phoneNumber User's phone number.
+     */
     public void setPhoneNumber(@Nullable String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
+    /**
+     *
+     * @return User email.
+     */
     @Nullable
     public String getEmail() {
         return email;
     }
 
+    /**
+     *
+     * @param email User email.
+     */
     public void setEmail(@Nullable String email) {
         this.email = email;
     }
 
+    /**
+     *
+     * @return User shipping address.
+     */
     @Nullable
     public ShippingAddress getShippingAddress() {
         return shippingAddress;
     }
 
+    /**
+     *
+     * @param shippingAddress User shipping address.
+     */
     public void setShippingAddress(@Nullable ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
     }

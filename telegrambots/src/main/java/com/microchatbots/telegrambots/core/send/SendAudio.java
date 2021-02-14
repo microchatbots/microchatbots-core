@@ -24,7 +24,7 @@ import edu.umd.cs.findbugs.annotations.Nullable;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @see <a href="https://core.telegram.org/bots/api#sendaudio">SendAudio</a>
+ * @see <a href="https://core.telegram.org/bots/api#sendaudio">SendAudio</a>.
  */
 @Introspected
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -51,11 +51,12 @@ public class SendAudio extends Send {
     @Nullable
     private String parseMode;
 
-            /**
-             * Duration of the audio in seconds.
-             */
+    /**
+     * Duration of the audio in seconds.
+     */
     @Nullable
     private Integer duration;
+
     /**
      * Performer.
      */
@@ -78,65 +79,121 @@ public class SendAudio extends Send {
         super(SEND_AUDIO);
     }
 
+    /**
+     *
+     * @return Audio file to send.
+     */
     @NonNull
     public String getAudio() {
         return audio;
     }
 
+    /**
+     *
+     * @param audio Audio file to send.
+     */
     public void setAudio(@NonNull String audio) {
         this.audio = audio;
     }
 
+    /**
+     *
+     * @return Audio caption, 0-1024 characters.
+     */
     @Nullable
     public String getCaption() {
         return caption;
     }
 
+    /**
+     *
+     * @param caption Audio caption, 0-1024 characters.
+     */
     public void setCaption(@Nullable String caption) {
         this.caption = caption;
     }
 
+    /**
+     *
+     * @return Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     @Nullable
     public String getParseMode() {
         return parseMode;
     }
 
+    /**
+     *
+     * @param parseMode Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     public void setParseMode(@Nullable String parseMode) {
         this.parseMode = parseMode;
     }
 
+    /**
+     *
+     * @return Duration of the audio in seconds.
+     */
     @Nullable
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Duration of the audio in seconds.
+     */
     public void setDuration(@Nullable Integer duration) {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return Performer.
+     */
     @Nullable
     public String getPerformer() {
         return performer;
     }
 
+    /**
+     *
+     * @param performer Performer.
+     */
     public void setPerformer(@Nullable String performer) {
         this.performer = performer;
     }
 
+    /**
+     *
+     * @return Track name.
+     */
     @Nullable
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title Track name.
+     */
     public void setTitle(@Nullable String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return Thumbnail of the file sent.
+     */
     @Nullable
     public String getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Thumbnail of the file sent.
+     */
     public void setThumb(@Nullable String thumb) {
         this.thumb = thumb;
     }

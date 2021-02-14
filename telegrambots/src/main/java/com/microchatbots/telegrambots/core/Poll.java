@@ -104,82 +104,154 @@ public class Poll {
     public Poll() {
     }
 
+    /**
+     *
+     * @return Unique poll identifier.
+     */
     @NonNull
     public String getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id Unique poll identifier.
+     */
     public void setId(@NonNull String id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return Poll question, 1-255 characters.
+     */
     @NonNull
     public String getQuestion() {
         return question;
     }
 
+    /**
+     *
+     * @param question Poll question, 1-255 characters.
+     */
     public void setQuestion(@NonNull String question) {
         this.question = question;
     }
 
+    /**
+     *
+     * @return List of poll options.
+     */
     @NonNull
     public List<PollOption> getOptions() {
         return options;
     }
 
+    /**
+     *
+     * @param options List of poll options.
+     */
     public void setOptions(@NonNull List<PollOption> options) {
         this.options = options;
     }
 
+    /**
+     *
+     * @return Total number of users that voted in the poll.
+     */
     @NonNull
     public Integer getTotalVoterCount() {
         return totalVoterCount;
     }
 
+    /**
+     *
+     * @param totalVoterCount Total number of users that voted in the poll.
+     */
     public void setTotalVoterCount(@NonNull Integer totalVoterCount) {
         this.totalVoterCount = totalVoterCount;
     }
 
+    /**
+     *
+     * @return True, if the poll is closed.
+     */
     @NonNull
     public Boolean getClosed() {
         return isClosed;
     }
 
+    /**
+     *
+     * @param closed True, if the poll is closed.
+     */
     public void setClosed(@NonNull Boolean closed) {
         isClosed = closed;
     }
 
+    /**
+     *
+     * @return True, if the poll is anonymous.
+     */
     @NonNull
     public Boolean getAnonymous() {
         return isAnonymous;
     }
 
+    /**
+     *
+     * @param anonymous True, if the poll is anonymous.
+     */
     public void setAnonymous(@NonNull Boolean anonymous) {
         isAnonymous = anonymous;
     }
 
+    /**
+     *
+     * @return type, currently can be “regular” or “quiz”.
+     */
     @NonNull
     public String getTypePoll() {
         return typePoll;
     }
 
+    /**
+     *
+     * @param typePoll type, currently can be “regular” or “quiz”.
+     */
     public void setTypePoll(@NonNull String typePoll) {
         this.typePoll = typePoll;
     }
 
+    /**
+     *
+     * @return True, if the poll allows multiple answers.
+     */
     @NonNull
     public Boolean getAllowsMultipleAnswers() {
         return allowsMultipleAnswers;
     }
 
+    /**
+     *
+     * @param allowsMultipleAnswers True, if the poll allows multiple answers.
+     */
     public void setAllowsMultipleAnswers(@NonNull Boolean allowsMultipleAnswers) {
         this.allowsMultipleAnswers = allowsMultipleAnswers;
     }
 
+    /**
+     *
+     * @return Optional. 0-based identifier of the correct answer option. Available only for polls in the quiz mode, which are closed, or was sent (not forwarded) by the bot or to the private chat with the bot.
+     */
     public Integer getCorrectOptionId() {
         return correctOptionId;
     }
 
+    /**
+     *
+     * @param correctOptionId Optional. 0-based identifier of the correct answer option. Available only for polls in the quiz mode, which are closed, or was sent (not forwarded) by the bot or to the private chat with the bot.
+     */
     public void setCorrectOptionId(Integer correctOptionId) {
         this.correctOptionId = correctOptionId;
     }

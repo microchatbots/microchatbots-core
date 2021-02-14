@@ -49,7 +49,7 @@ public class CallbackQuery {
     private User from;
 
     /**
-     * Message with the callback button that originated the query. Note that message content and message date will not be available if the message is too old
+     * Message with the callback button that originated the query. Note that message content and message date will not be available if the message is too old.
      */
     @Nullable
     private Message message;
@@ -85,65 +85,121 @@ public class CallbackQuery {
     public CallbackQuery() {
     }
 
+    /**
+     *
+     * @return Unique identifier for this query.
+     */
     @NonNull
     public String getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id Unique identifier for this query.
+     */
     public void setId(@NonNull String id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return Sender.
+     */
     @NonNull
     public User getFrom() {
         return from;
     }
 
+    /**
+     *
+     * @param from Sender.
+     */
     public void setFrom(@NonNull User from) {
         this.from = from;
     }
 
+    /**
+     *
+     * @return Message with the callback button that originated the query. Note that message content and message date will not be available if the message is too old.
+     */
     @Nullable
     public Message getMessage() {
         return message;
     }
 
+    /**
+     *
+     * @param message Message with the callback button that originated the query. Note that message content and message date will not be available if the message is too old.
+     */
     public void setMessage(@Nullable Message message) {
         this.message = message;
     }
 
+    /**
+     *
+     * @return Identifier of the message sent via the bot in inline mode, that originated the query.
+     */
     @Nullable
     public String getInlineMessageId() {
         return inlineMessageId;
     }
 
+    /**
+     *
+     * @param inlineMessageId Identifier of the message sent via the bot in inline mode, that originated the query.
+     */
     public void setInlineMessageId(@Nullable String inlineMessageId) {
         this.inlineMessageId = inlineMessageId;
     }
 
+    /**
+     *
+     * @return Global identifier, uniquely corresponding to the chat to which the message with the callback button was sent. Useful for high scores in games.
+     */
     @NonNull
     public String getChatInstance() {
         return chatInstance;
     }
 
+    /**
+     *
+     * @param chatInstance Global identifier, uniquely corresponding to the chat to which the message with the callback button was sent. Useful for high scores in games.
+     */
     public void setChatInstance(@NonNull String chatInstance) {
         this.chatInstance = chatInstance;
     }
 
+    /**
+     *
+     * @return Data associated with the callback button. Be aware that a bad client can send arbitrary data in this field.
+     */
     @Nullable
     public String getData() {
         return data;
     }
 
+    /**
+     *
+     * @param data Data associated with the callback button. Be aware that a bad client can send arbitrary data in this field.
+     */
     public void setData(@Nullable String data) {
         this.data = data;
     }
 
+    /**
+     *
+     * @return Short name of a Game to be returned, serves as the unique identifier for the game.
+     */
     @Nullable
     public String getGameShortName() {
         return gameShortName;
     }
 
+    /**
+     *
+     * @param gameShortName Short name of a Game to be returned, serves as the unique identifier for the game.
+     */
     public void setGameShortName(@Nullable String gameShortName) {
         this.gameShortName = gameShortName;
     }

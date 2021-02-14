@@ -51,7 +51,7 @@ public class ForwardMessage {
     private Boolean disableNotification;
 
     /**
-     * Message identifier in the chat specified in from_chat_id
+     * Message identifier in the chat specified in from_chat_id.
      */
     @JsonProperty("message_id")
     @NonNull
@@ -61,11 +61,19 @@ public class ForwardMessage {
     public ForwardMessage() {
     }
 
+    /**
+     *
+     * @return Unique identifier for the target chat or username of the target channel (in the format @channelusername).
+     */
     @NonNull
     public String getChatId() {
         return chatId;
     }
 
+    /**
+     *
+     * @param chatId Unique identifier for the target chat or username of the target channel (in the format @channelusername).
+     */
     public void setChatId(@NonNull String chatId) {
         this.chatId = chatId;
     }
@@ -87,11 +95,19 @@ public class ForwardMessage {
         this.fromChatId = fromChatId;
     }
 
+    /**
+     *
+     * @return Sends the message silently. Users will receive a notification with no sound.
+     */
     @Nullable
     public Boolean getDisableNotification() {
         return disableNotification;
     }
 
+    /**
+     *
+     * @param disableNotification Sends the message silently. Users will receive a notification with no sound.
+     */
     public void setDisableNotification(@Nullable Boolean disableNotification) {
         this.disableNotification = disableNotification;
     }

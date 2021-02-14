@@ -73,16 +73,23 @@ public class SendAnimation extends Send {
     @Nullable
     private String parseMode;
 
-
     public SendAnimation() {
         super(SEND_ANIMATION);
     }
 
+    /**
+     *
+     * @return Animation to send.
+     */
     @NonNull
     public String getAnimation() {
         return animation;
     }
 
+    /**
+     *
+     * @param animation Animation to send.
+     */
     public void setAnimation(@NonNull String animation) {
         this.animation = animation;
     }
@@ -104,29 +111,53 @@ public class SendAnimation extends Send {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return Video width.
+     */
     @Nullable
     public Integer getWidth() {
         return width;
     }
 
+    /**
+     *
+     * @param width Video width.
+     */
     public void setWidth(@Nullable Integer width) {
         this.width = width;
     }
 
+    /**
+     *
+     * @return Video height.
+     */
     @Nullable
     public Integer getHeight() {
         return height;
     }
 
+    /**
+     *
+     * @param height Video height.
+     */
     public void setHeight(@Nullable Integer height) {
         this.height = height;
     }
 
+    /**
+     *
+     * @return Thumbnail of the file sent
+     */
     @Nullable
     public String getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Thumbnail of the file sent
+     */
     public void setThumb(@Nullable String thumb) {
         this.thumb = thumb;
     }

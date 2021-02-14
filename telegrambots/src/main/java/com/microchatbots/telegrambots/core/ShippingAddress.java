@@ -79,56 +79,104 @@ public class ShippingAddress {
     public ShippingAddress() {
     }
 
+    /**
+     *
+     * @return ISO 3166-1 alpha-2 country code.
+     */
     @NonNull
     public String getCountryCode() {
         return countryCode;
     }
 
+    /**
+     *
+     * @param countryCode ISO 3166-1 alpha-2 country code.
+     */
     public void setCountryCode(@NonNull String countryCode) {
         this.countryCode = countryCode;
     }
 
+    /**
+     *
+     * @return State, if applicable.
+     */
     @NonNull
     public String getState() {
         return state;
     }
 
+    /**
+     *
+     * @param state State, if applicable.
+     */
     public void setState(@NonNull String state) {
         this.state = state;
     }
 
+    /**
+     *
+     * @return City.
+     */
     @NonNull
     public String getCity() {
         return city;
     }
 
+    /**
+     *
+     * @param city City.
+     */
     public void setCity(@NonNull String city) {
         this.city = city;
     }
 
+    /**
+     *
+     * @return First line for the address.
+     */
     @NonNull
     public String getStreetLine1() {
         return streetLine1;
     }
 
+    /**
+     *
+     * @param streetLine1 First line for the address.
+     */
     public void setStreetLine1(@NonNull String streetLine1) {
         this.streetLine1 = streetLine1;
     }
 
+    /**
+     *
+     * @return Second line for the address.
+     */
     @NonNull
     public String getStreetLine2() {
         return streetLine2;
     }
 
+    /**
+     *
+     * @param streetLine2 Second line for the address.
+     */
     public void setStreetLine2(@NonNull String streetLine2) {
         this.streetLine2 = streetLine2;
     }
 
+    /**
+     *
+     * @return Address post codes.
+     */
     @NonNull
     public String getPostCode() {
         return postCode;
     }
 
+    /**
+     *
+     * @param postCode Address post codes.
+     */
     public void setPostCode(@NonNull String postCode) {
         this.postCode = postCode;
     }

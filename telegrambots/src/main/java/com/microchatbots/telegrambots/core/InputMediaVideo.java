@@ -58,38 +58,70 @@ public class InputMediaVideo extends InputMediaDocument {
         super(TYPE_VIDEO);
     }
 
+    /**
+     *
+     * @return Video width
+     */
     @Nullable
     public Integer getWidth() {
         return width;
     }
 
+    /**
+     *
+     * @param width Video width
+     */
     public void setWidth(@Nullable Integer width) {
         this.width = width;
     }
 
+    /**
+     *
+     * @return Video height.
+     */
     @Nullable
     public Integer getHeight() {
         return height;
     }
 
+    /**
+     *
+     * @param height Video height.
+     */
     public void setHeight(@Nullable Integer height) {
         this.height = height;
     }
 
+    /**
+     *
+     * @return Video duration.
+     */
     @Nullable
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Video duration.
+     */
     public void setDuration(@Nullable Integer duration) {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return True, if the uploaded video is suitable for streaming.
+     */
     @Nullable
     public Boolean getSupportsStreaming() {
         return supportsStreaming;
     }
 
+    /**
+     *
+     * @param supportsStreaming Pass True, if the uploaded video is suitable for streaming.
+     */
     public void setSupportsStreaming(@Nullable Boolean supportsStreaming) {
         this.supportsStreaming = supportsStreaming;
     }

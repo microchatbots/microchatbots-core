@@ -56,29 +56,53 @@ public class SendPhoto extends Send {
         super(SEND_PHOTO);
     }
 
+    /**
+     *
+     * @return Photo to send.
+     */
     @NonNull
     public String getPhoto() {
         return photo;
     }
 
+    /**
+     *
+     * @param photo Photo to send.
+     */
     public void setPhoto(@NonNull String photo) {
         this.photo = photo;
     }
 
+    /**
+     *
+     * @return Photo caption (may also be used when resending photos by file_id), 0-1024 characters.
+     */
     @Nullable
     public String getCaption() {
         return caption;
     }
 
+    /**
+     *
+     * @param caption Photo caption (may also be used when resending photos by file_id), 0-1024 characters.
+     */
     public void setCaption(@Nullable String caption) {
         this.caption = caption;
     }
 
+    /**
+     *
+     * @return Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     @Nullable
     public String getParseMode() {
         return parseMode;
     }
 
+    /**
+     *
+     * @param parseMode Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     public void setParseMode(@Nullable String parseMode) {
         this.parseMode = parseMode;
     }

@@ -18,8 +18,6 @@ package com.microchatbots.telegrambots.core;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import io.micronaut.core.annotation.Introspected;
-
-import edu.umd.cs.findbugs.annotations.Nullable;
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -54,28 +52,52 @@ public class EncryptedCredentials {
     public EncryptedCredentials() {
     }
 
+    /**
+     *
+     * @return Base64-encoded encrypted JSON-serialized data with unique user's payload, data hashes and secrets required for EncryptedPassportElement decryption and authentication.
+     */
     @NonNull
     public String getData() {
         return data;
     }
 
+    /**
+     * Base64-encoded encrypted JSON-serialized data with unique user's payload, data hashes and secrets required for EncryptedPassportElement decryption and authentication.
+     * @param data
+     */
     public void setData(@NonNull String data) {
         this.data = data;
     }
 
+    /**
+     *
+     * @return Base64-encoded data hash for data authentication.
+     */
     @NonNull
     public String getHash() {
         return hash;
     }
 
+    /**
+     *
+     * @param hash Base64-encoded data hash for data authentication.
+     */
     public void setHash(@NonNull String hash) {
         this.hash = hash;
     }
 
+    /**
+     *
+     * @return Base64-encoded secret, encrypted with the bot's public RSA key, required for data decryption
+     */
     public String getSecret() {
         return secret;
     }
 
+    /**
+     *
+     * @param secret Base64-encoded secret, encrypted with the bot's public RSA key, required for data decryption
+     */
     public void setSecret(String secret) {
         this.secret = secret;
     }

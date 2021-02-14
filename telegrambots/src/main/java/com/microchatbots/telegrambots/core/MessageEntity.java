@@ -69,47 +69,87 @@ public class MessageEntity {
     public MessageEntity() {
     }
 
+    /**
+     *
+     * @return Type of the entity.
+     */
     @NonNull
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type Type of the entity.
+     */
     public void setType(@NonNull String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return Offset in UTF-16 code units to the start of the entity.
+     */
     @NonNull
     public Integer getOffset() {
         return offset;
     }
 
+    /**
+     *
+     * @param offset Offset in UTF-16 code units to the start of the entity.
+     */
     public void setOffset(@NonNull Integer offset) {
         this.offset = offset;
     }
 
+    /**
+     *
+     * @return Length of the entity in UTF-16 code units.
+     */
     @NonNull
     public Integer getLength() {
         return length;
     }
 
+    /**
+     *
+     * @param length Length of the entity in UTF-16 code units.
+     */
     public void setLength(@NonNull Integer length) {
         this.length = length;
     }
 
+    /**
+     *
+     * @return For “text_link” only, url that will be opened after user taps on the text.
+     */
     @Nullable
     public String getUrl() {
         return url;
     }
 
+    /**
+     *
+     * @param url For “text_link” only, url that will be opened after user taps on the text.
+     */
     public void setUrl(@Nullable String url) {
         this.url = url;
     }
 
+    /**
+     *
+     * @return For “text_mention” only, the mentioned user.
+     */
     @Nullable
     public User getUser() {
         return user;
     }
 
+    /**
+     *
+     * @param user For “text_mention” only, the mentioned user.
+     */
     public void setUser(@Nullable User user) {
         this.user = user;
     }

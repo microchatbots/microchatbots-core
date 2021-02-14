@@ -51,7 +51,7 @@ public class SendContact extends Send  {
     private String lastName;
 
     /**
-     * Additional data about the contact in the form of a vCard, 0-2048 bytes
+     * Additional data about the contact in the form of a vCard, 0-2048 bytes.
      */
     @Nullable
     private String vcard;
@@ -60,38 +60,70 @@ public class SendContact extends Send  {
         super("sendContact");
     }
 
+    /**
+     *
+     * @return Contact's phone number.
+     */
     @NonNull
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
+    /**
+     *
+     * @param phoneNumber Contact's phone number.
+     */
     public void setPhoneNumber(@NonNull String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
+    /**
+     *
+     * @return Contact's first name.
+     */
     @NonNull
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     *
+     * @param firstName Contact's first name.
+     */
     public void setFirstName(@NonNull String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     *
+     * @return Contact's last name.
+     */
     @Nullable
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     *
+     * @param lastName Contact's last name.
+     */
     public void setLastName(@Nullable String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     *
+     * @return Additional data about the contact in the form of a vCard, 0-2048 bytes.
+     */
     @Nullable
     public String getVcard() {
         return vcard;
     }
 
+    /**
+     *
+     * @param vcard Additional data about the contact in the form of a vCard, 0-2048 bytes.
+     */
     public void setVcard(@Nullable String vcard) {
         this.vcard = vcard;
     }

@@ -62,38 +62,70 @@ public class KeyboardButton {
     public KeyboardButton() {
     }
 
+    /**
+     *
+     * @return Text of the button.
+     */
     @NonNull
     public String getText() {
         return text;
     }
 
+    /**
+     *
+     * @param text Text of the button.
+     */
     public void setText(@NonNull String text) {
         this.text = text;
     }
 
+    /**
+     *
+     * @return If True, the user's phone number will be sent as a contact when the button is pressed.
+     */
     @Nullable
     public Boolean getRequestContact() {
         return requestContact;
     }
 
+    /**
+     *
+     * @param requestContact If True, the user's phone number will be sent as a contact when the button is pressed.
+     */
     public void setRequestContact(@Nullable Boolean requestContact) {
         this.requestContact = requestContact;
     }
 
+    /**
+     *
+     * @return If True, the user's current location will be sent when the button is pressed.
+     */
     @Nullable
     public Boolean getRequestLocation() {
         return requestLocation;
     }
 
+    /**
+     *
+     * @param requestLocation If True, the user's current location will be sent when the button is pressed.
+     */
     public void setRequestLocation(@Nullable Boolean requestLocation) {
         this.requestLocation = requestLocation;
     }
 
+    /**
+     *
+     * @return If specified, the user will be asked to create a poll and send it to the bot when the button is pressed.
+     */
     @Nullable
     public KeyboardButtonPollType getRequestPoll() {
         return requestPoll;
     }
 
+    /**
+     *
+     * @param requestPoll If specified, the user will be asked to create a poll and send it to the bot when the button is pressed.
+     */
     public void setRequestPoll(@Nullable KeyboardButtonPollType requestPoll) {
         this.requestPoll = requestPoll;
     }

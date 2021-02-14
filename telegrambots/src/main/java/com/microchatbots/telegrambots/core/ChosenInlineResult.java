@@ -33,7 +33,7 @@ import javax.validation.constraints.NotNull;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ChosenInlineResult {
     /**
-     * The unique identifier for the result that was chosen
+     * The unique identifier for the result that was chosen.
      */
     @NonNull
     @NotBlank
@@ -41,7 +41,7 @@ public class ChosenInlineResult {
     private String resultId;
 
     /**
-     * The user that chose the result
+     * The user that chose the result.
      */
     @NonNull
     @NotNull
@@ -62,7 +62,7 @@ public class ChosenInlineResult {
     private String inlineMessageId;
 
     /**
-     * The query that was used to obtain the result
+     * The query that was used to obtain the result.
      */
     @NonNull
     @NotBlank
@@ -71,47 +71,87 @@ public class ChosenInlineResult {
     public ChosenInlineResult() {
     }
 
+    /**
+     *
+     * @return The unique identifier for the result that was chosen
+     */
     @NonNull
     public String getResultId() {
         return resultId;
     }
 
+    /**
+     *
+     * @param resultId The unique identifier for the result that was chosen
+     */
     public void setResultId(@NonNull String resultId) {
         this.resultId = resultId;
     }
 
+    /**
+     *
+     * @return The user that chose the result.
+     */
     @NonNull
     public User getFrom() {
         return from;
     }
 
+    /**
+     *
+     * @param from The user that chose the result.
+     */
     public void setFrom(@NonNull User from) {
         this.from = from;
     }
 
+    /**
+     *
+     * @return Sender location, only for bots that require user location.
+     */
     @Nullable
     public Location getLocation() {
         return location;
     }
 
+    /**
+     *
+     * @param location Sender location, only for bots that require user location.
+     */
     public void setLocation(@Nullable Location location) {
         this.location = location;
     }
 
+    /**
+     *
+     * @return Identifier of the sent inline message.
+     */
     @Nullable
     public String getInlineMessageId() {
         return inlineMessageId;
     }
 
+    /**
+     *
+     * @param inlineMessageId Identifier of the sent inline message.
+     */
     public void setInlineMessageId(@Nullable String inlineMessageId) {
         this.inlineMessageId = inlineMessageId;
     }
 
+    /**
+     *
+     * @return The query that was used to obtain the result
+     */
     @NonNull
     public String getQuery() {
         return query;
     }
 
+    /**
+     *
+     * @param query The query that was used to obtain the result
+     */
     public void setQuery(@NonNull String query) {
         this.query = query;
     }

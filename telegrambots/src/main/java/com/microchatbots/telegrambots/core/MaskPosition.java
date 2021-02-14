@@ -63,38 +63,70 @@ public class MaskPosition {
     public MaskPosition() {
     }
 
+    /**
+     *
+     * @return The part of the face relative to which the mask should be placed.
+     */
     @NonNull
     public MaskPositionPoint getPoint() {
         return point;
     }
 
+    /**
+     *
+     * @param point The part of the face relative to which the mask should be placed.
+     */
     public void setPoint(@NonNull MaskPositionPoint point) {
         this.point = point;
     }
 
+    /**
+     *
+     * @return Shift by X-axis measured in widths of the mask scaled to the face size, from left to right.
+     */
     @NonNull
     public Float getXshift() {
         return xshift;
     }
 
+    /**
+     *
+     * @param xshift Shift by X-axis measured in widths of the mask scaled to the face size, from left to right.
+     */
     public void setXshift(@NonNull Float xshift) {
         this.xshift = xshift;
     }
 
+    /**
+     *
+     * @return Shift by Y-axis measured in heights of the mask scaled to the face size, from top to bottom.
+     */
     @NonNull
     public Float getYshift() {
         return yshift;
     }
 
+    /**
+     *
+     * @param yshift Shift by Y-axis measured in heights of the mask scaled to the face size, from top to bottom.
+     */
     public void setYshift(@NonNull Float yshift) {
         this.yshift = yshift;
     }
 
+    /**
+     *
+     * @return Mask scaling coefficient. For example, 2.0 means double size.
+     */
     @NonNull
     public Float getScale() {
         return scale;
     }
 
+    /**
+     *
+     * @param scale Mask scaling coefficient. For example, 2.0 means double size.
+     */
     public void setScale(@NonNull Float scale) {
         this.scale = scale;
     }

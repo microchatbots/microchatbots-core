@@ -36,7 +36,7 @@ public class GetUserProfilePhotos {
     private Integer userId;
 
     /**
-     * Sequential number of the first photo to be returned. By default, all photos are returned..
+     * Sequential number of the first photo to be returned. By default, all photos are returned.
      */
     @Nullable
     private Integer offset;
@@ -50,29 +50,53 @@ public class GetUserProfilePhotos {
     public GetUserProfilePhotos() {
     }
 
+    /**
+     *
+     * @return Unique identifier of the target user.
+     */
     @NonNull
     public Integer getUserId() {
         return userId;
     }
 
+    /**
+     *
+     * @param userId Unique identifier of the target user.
+     */
     public void setUserId(@NonNull Integer userId) {
         this.userId = userId;
     }
 
+    /**
+     *
+     * @return Sequential number of the first photo to be returned. By default, all photos are returned.
+     */
     @Nullable
     public Integer getOffset() {
         return offset;
     }
 
+    /**
+     *
+     * @param offset Sequential number of the first photo to be returned. By default, all photos are returned.
+     */
     public void setOffset(@Nullable Integer offset) {
         this.offset = offset;
     }
 
+    /**
+     *
+     * @return Limits the number of photos to be retrieved. Values between 1—100 are accepted. Defaults to 100.
+     */
     @Nullable
     public Integer getLimit() {
         return limit;
     }
 
+    /**
+     *
+     * @param limit Limits the number of photos to be retrieved. Values between 1—100 are accepted. Defaults to 100.
+     */
     public void setLimit(@Nullable Integer limit) {
         this.limit = limit;
     }

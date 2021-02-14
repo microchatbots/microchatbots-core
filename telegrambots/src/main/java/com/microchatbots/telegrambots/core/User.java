@@ -34,14 +34,14 @@ import javax.validation.constraints.NotNull;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
     /**
-     * Unique identifier for this user or bot
+     * Unique identifier for this user or bot.
      */
     @NonNull
     @NotNull
     private Integer id;
 
     /**
-     * True, if this user is a bot
+     * True, if this user is a bot.
      */
     @JsonProperty("is_bot")
     @NonNull
@@ -49,7 +49,7 @@ public class User {
     private Boolean bot;
 
     /**
-     * User‘s or bot’s first name
+     * User‘s or bot’s first name.
      */
     @JsonProperty("first_name")
     @NonNull
@@ -57,20 +57,20 @@ public class User {
     private String firstName;
 
     /**
-     * User‘s or bot’s last name
+     * User‘s or bot’s last name.
      */
     @JsonProperty("last_name")
     @Nullable
     private String lastName;
 
     /**
-     * User‘s or bot’s username
+     * User‘s or bot’s username.
      */
     @Nullable
     private String username;
 
     /**
-     * IETF language tag of the user's language
+     * IETF language tag of the user's language.
      * <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>
      */
     @Nullable
@@ -102,83 +102,155 @@ public class User {
 
     }
 
+    /**
+     *
+     * @return Unique identifier for this user or bot.
+     */
     @NonNull
     public Integer getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id Unique identifier for this user or bot.
+     */
     public void setId(@NonNull Integer id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return True, if this user is a bot.
+     */
     @NonNull
     public Boolean getBot() {
         return bot;
     }
 
+    /**
+     *
+     * @param bot True, if this user is a bot.
+     */
     public void setBot(@NonNull Boolean bot) {
         this.bot = bot;
     }
 
+    /**
+     *
+     * @return User‘s or bot’s first name.
+     */
     @NonNull
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     *
+     * @param firstName User‘s or bot’s first name.
+     */
     public void setFirstName(@NonNull String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     *
+     * @return User‘s or bot’s last name.
+     */
     @Nullable
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     *
+     * @param lastName User‘s or bot’s last name.
+     */
     public void setLastName(@Nullable String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     *
+     * @return User‘s or bot’s username.
+     */
     @Nullable
     public String getUsername() {
         return username;
     }
 
+    /**
+     *
+     * @param username User‘s or bot’s username.
+     */
     public void setUsername(@Nullable String username) {
         this.username = username;
     }
 
+    /**
+     *
+     * @return IETF language tag of the user's language.
+     */
     @Nullable
     public String getLanguageCode() {
         return languageCode;
     }
 
+    /**
+     *
+     * @param languageCode IETF language tag of the user's language.
+     */
     public void setLanguageCode(@Nullable String languageCode) {
         this.languageCode = languageCode;
     }
 
+    /**
+     *
+     * @return True, if the bot can be invited to groups. Returned only in getMe.
+     */
     @Nullable
     public Boolean getCanJoinGroups() {
         return canJoinGroups;
     }
 
+    /**
+     *
+     * @param canJoinGroups True, if the bot can be invited to groups. Returned only in getMe.
+     */
     public void setCanJoinGroups(@Nullable Boolean canJoinGroups) {
         this.canJoinGroups = canJoinGroups;
     }
 
+    /**
+     *
+     * @return True, if privacy mode is disabled for the bot. Returned only in getMe.
+     */
     @Nullable
     public Boolean getCanReadAllGroupMessages() {
         return canReadAllGroupMessages;
     }
 
+    /**
+     *
+     * @param canReadAllGroupMessages True, if privacy mode is disabled for the bot. Returned only in getMe.
+     */
     public void setCanReadAllGroupMessages(@Nullable Boolean canReadAllGroupMessages) {
         this.canReadAllGroupMessages = canReadAllGroupMessages;
     }
 
+    /**
+     *
+     * @return True, if the bot supports inline queries. Returned only in getMe.
+     */
     @Nullable
     public Boolean getSupportsInlineQueries() {
         return supportsInlineQueries;
     }
 
+    /**
+     *
+     * @param supportsInlineQueries True, if the bot supports inline queries. Returned only in getMe.
+     */
     public void setSupportsInlineQueries(@Nullable Boolean supportsInlineQueries) {
         this.supportsInlineQueries = supportsInlineQueries;
     }

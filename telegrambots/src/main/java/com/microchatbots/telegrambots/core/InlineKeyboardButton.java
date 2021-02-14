@@ -94,74 +94,138 @@ public class InlineKeyboardButton {
     public InlineKeyboardButton() {
     }
 
+    /**
+     *
+     * @return Label text on the button.
+     */
     @NonNull
     public String getText() {
         return text;
     }
 
+    /**
+     *
+     * @param text Label text on the button.
+     */
     public void setText(@NonNull String text) {
         this.text = text;
     }
 
+    /**
+     *
+     * @return HTTP or tg:// url to be opened when button is pressed
+     */
     @Nullable
     public String getUrl() {
         return url;
     }
 
+    /**
+     *
+     * @param url HTTP or tg:// url to be opened when button is pressed
+     */
     public void setUrl(@Nullable String url) {
         this.url = url;
     }
 
+    /**
+     *
+     * @return An HTTP URL used to automatically authorize the user. Can be used as a replacement for the Telegram Login Widget.
+     */
     @Nullable
     public LoginUrl getLoginUrl() {
         return loginUrl;
     }
 
+    /**
+     *
+     * @param loginUrl An HTTP URL used to automatically authorize the user. Can be used as a replacement for the Telegram Login Widget.
+     */
     public void setLoginUrl(@Nullable LoginUrl loginUrl) {
         this.loginUrl = loginUrl;
     }
 
+    /**
+     *
+     * @return Data to be sent in a callback query to the bot when button is pressed, 1-64 bytes.
+     */
     @Nullable
     public String getCallbackData() {
         return callbackData;
     }
 
+    /**
+     *
+     * @param callbackData Data to be sent in a callback query to the bot when button is pressed, 1-64 bytes.
+     */
     public void setCallbackData(@Nullable String callbackData) {
         this.callbackData = callbackData;
     }
 
+    /**
+     *
+     * @return If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
+     */
     @Nullable
     public String getSwitchInlineQuery() {
         return switchInlineQuery;
     }
 
+    /**
+     *
+     * @param switchInlineQuery If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
+     */
     public void setSwitchInlineQuery(@Nullable String switchInlineQuery) {
         this.switchInlineQuery = switchInlineQuery;
     }
 
+    /**
+     *
+     * @return If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted.
+     */
     @Nullable
     public String getSwitchInlineQueryCurrentChat() {
         return switchInlineQueryCurrentChat;
     }
 
+    /**
+     *
+     * @param switchInlineQueryCurrentChat If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat's input field. Can be empty, in which case only the bot’s username will be inserted.
+     */
     public void setSwitchInlineQueryCurrentChat(@Nullable String switchInlineQueryCurrentChat) {
         this.switchInlineQueryCurrentChat = switchInlineQueryCurrentChat;
     }
 
+    /**
+     *
+     * @return Description of the game that will be launched when the user presses the button.
+     */
     @Nullable
     public CallbackGame getCallbackGame() {
         return callbackGame;
     }
 
+    /**
+     *
+     * @param callbackGame Description of the game that will be launched when the user presses the button.
+     */
     public void setCallbackGame(@Nullable CallbackGame callbackGame) {
         this.callbackGame = callbackGame;
     }
 
+    /**
+     *
+     * @return Specify True, to send a Pay button.
+     */
     @Nullable
     public Boolean getPay() {
         return pay;
     }
 
+    /**
+     *
+     * @param pay Specify True, to send a Pay button.
+     */
     public void setPay(@Nullable Boolean pay) {
         this.pay = pay;
     }

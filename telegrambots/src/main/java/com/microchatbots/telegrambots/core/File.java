@@ -63,38 +63,70 @@ public class File {
     public File() {
     }
 
+    /**
+     *
+     * @return Identifier for this file, which can be used to download or reuse the file.
+     */
     @NonNull
     public String getFileId() {
         return fileId;
     }
 
+    /**
+     *
+     * @param fileId Identifier for this file, which can be used to download or reuse the file.
+     */
     public void setFileId(@NonNull String fileId) {
         this.fileId = fileId;
     }
 
+    /**
+     *
+     * @return Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     @NonNull
     public String getFileUniqueId() {
         return fileUniqueId;
     }
 
+    /**
+     *
+     * @param fileUniqueId Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     public void setFileUniqueId(@NonNull String fileUniqueId) {
         this.fileUniqueId = fileUniqueId;
     }
 
+    /**
+     *
+     * @return File size, if known.
+     */
     @Nullable
     public Integer getFileSize() {
         return fileSize;
     }
 
+    /**
+     *
+     * @param fileSize File size, if known.
+     */
     public void setFileSize(@Nullable Integer fileSize) {
         this.fileSize = fileSize;
     }
 
+    /**
+     *
+     * @return File path. Use https://api.telegram.org/file/bot<token>/<file_path> to get the file.
+     */
     @Nullable
     public String getFilePath() {
         return filePath;
     }
 
+    /**
+     *
+     * @param filePath File path. Use https://api.telegram.org/file/bot<token>/<file_path> to get the file.
+     */
     public void setFilePath(@Nullable String filePath) {
         this.filePath = filePath;
     }

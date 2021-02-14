@@ -40,7 +40,6 @@ public abstract class InputMedia {
     @NotBlank
     private String type;
 
-
     /**
      * File to send. Pass a file_id to send a file that exists on the Telegram servers (recommended), pass an HTTP URL for Telegram to get a file from the Internet, or pass “attach://<file_attach_name>” to upload a new one using multipart/form-data under <file_attach_name> name.
      * @see <a href="https://core.telegram.org/bots/api#sending-files">More info on Sending Files</a>
@@ -48,7 +47,6 @@ public abstract class InputMedia {
     @NonNull
     @NotBlank
     private String media;
-
 
     /**
      * Caption of the audio to be sent, 0-1024 characters
@@ -67,38 +65,70 @@ public abstract class InputMedia {
         this.type = type;
     }
 
+    /**
+     *
+     * @return Type of the result, must be photo.
+     */
     @NonNull
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type Type of the result, must be photo.
+     */
     public void setType(@NonNull String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return File to send.
+     */
     @NonNull
     public String getMedia() {
         return media;
     }
 
+    /**
+     *
+     * @param media File to send.
+     */
     public void setMedia(@NonNull String media) {
         this.media = media;
     }
 
+    /**
+     *
+     * @return Caption of the audio to be sent, 0-1024 characters
+     */
     @Nullable
     public String getCaption() {
         return caption;
     }
 
+    /**
+     *
+     * @param caption Caption of the audio to be sent, 0-1024 characters
+     */
     public void setCaption(@Nullable String caption) {
         this.caption = caption;
     }
 
+    /**
+     *
+     * @return Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     @Nullable
     public String getParseMode() {
         return parseMode;
     }
 
+    /**
+     *
+     * @param parseMode Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     public void setParseMode(@Nullable String parseMode) {
         this.parseMode = parseMode;
     }

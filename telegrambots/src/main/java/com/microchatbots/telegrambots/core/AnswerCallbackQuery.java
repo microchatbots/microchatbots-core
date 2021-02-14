@@ -39,7 +39,7 @@ public class AnswerCallbackQuery {
     private String callbackQueryId;
 
     /**
-     * Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters,
+     * Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters.
      */
     @Nullable
     private String text;
@@ -69,46 +69,86 @@ public class AnswerCallbackQuery {
     public AnswerCallbackQuery() {
     }
 
+    /**
+     *
+     * @return Unique identifier for the query to be answered.
+     */
     public String getCallbackQueryId() {
         return callbackQueryId;
     }
 
+    /**
+     *
+     * @param callbackQueryId Unique identifier for the query to be answered.
+     */
     public void setCallbackQueryId(String callbackQueryId) {
         this.callbackQueryId = callbackQueryId;
     }
 
+    /**
+     *
+     * @return Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters.
+     */
     @Nullable
     public String getText() {
         return text;
     }
 
+    /**
+     *
+     * @param text Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters.
+     */
     public void setText(@Nullable String text) {
         this.text = text;
     }
 
+    /**
+     *
+     * @return If true, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to false.
+     */
     @Nullable
     public Boolean getShowAlert() {
         return showAlert;
     }
 
+    /**
+     *
+     * @param showAlert If true, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to false.
+     */
     public void setShowAlert(@Nullable Boolean showAlert) {
         this.showAlert = showAlert;
     }
 
+    /**
+     *
+     * @return URL that will be opened by the user's client.
+     */
     @Nullable
     public String getUrl() {
         return url;
     }
 
+    /**
+     *
+     * @param url URL that will be opened by the user's client.
+     */
     public void setUrl(@Nullable String url) {
         this.url = url;
     }
 
+    /**
+     *
+     * @return The maximum amount of time in seconds that the result of the callback query may be cached client-side.
+     */
     @Nullable
     public Integer getCacheTime() {
         return cacheTime;
     }
 
+    /**
+     *
+     * @param cacheTime The maximum amount of time in seconds that the result of the callback query may be cached client-side.
+     */
     public void setCacheTime(@Nullable Integer cacheTime) {
         this.cacheTime = cacheTime;
     }

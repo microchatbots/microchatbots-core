@@ -48,7 +48,6 @@ public class PhotoSize {
     @NotBlank
     private String fileUniqueId;
 
-
     /**
      * Photo width.
      */
@@ -73,47 +72,87 @@ public class PhotoSize {
     public PhotoSize() {
     }
 
+    /**
+     *
+     * @return Identifier for this file.
+     */
     @NonNull
     public String getFileId() {
         return fileId;
     }
 
+    /**
+     *
+     * @param fileId Identifier for this file.
+     */
     public void setFileId(@NonNull String fileId) {
         this.fileId = fileId;
     }
 
+    /**
+     *
+     * @return Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     @NonNull
     public String getFileUniqueId() {
         return fileUniqueId;
     }
 
+    /**
+     *
+     * @param fileUniqueId Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     public void setFileUniqueId(@NonNull String fileUniqueId) {
         this.fileUniqueId = fileUniqueId;
     }
 
+    /**
+     *
+     * @return Photo width.
+     */
     @NonNull
     public Integer getWidth() {
         return width;
     }
 
+    /**
+     *
+     * @param width Photo width.
+     */
     public void setWidth(@NonNull Integer width) {
         this.width = width;
     }
 
+    /**
+     *
+     * @return Photo height.
+     */
     @NonNull
     public Integer getHeight() {
         return height;
     }
 
+    /**
+     *
+     * @param height Photo height.
+     */
     public void setHeight(@NonNull Integer height) {
         this.height = height;
     }
 
+    /**
+     *
+     * @return File size.
+     */
     @Nullable
     public Integer getFileSize() {
         return fileSize;
     }
 
+    /**
+     *
+     * @param fileSize File size.
+     */
     public void setFileSize(@Nullable Integer fileSize) {
         this.fileSize = fileSize;
     }

@@ -79,60 +79,107 @@ public class Document {
     public Document() {
     }
 
+    /**
+     *
+     * @return Identifier for this file.
+     */
     @NonNull
     public String getFileId() {
         return fileId;
     }
 
+    /**
+     *
+     * @param fileId Identifier for this file.
+     */
     public void setFileId(@NonNull String fileId) {
         this.fileId = fileId;
     }
 
+    /**
+     *
+     * @return Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     @NonNull
     public String getFileUniqueId() {
         return fileUniqueId;
     }
 
+    /**
+     *
+     * @param fileUniqueId Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     public void setFileUniqueId(@NonNull String fileUniqueId) {
         this.fileUniqueId = fileUniqueId;
     }
 
+    /**
+     *
+     * @return Document thumbnail as defined by sender.
+     */
     @Nullable
     public PhotoSize getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Document thumbnail as defined by sender.
+     */
     public void setThumb(@Nullable PhotoSize thumb) {
         this.thumb = thumb;
     }
 
+    /**
+     *
+     * @return Original filename as defined by sender.
+     */
     @Nullable
     public String getFileName() {
         return fileName;
     }
 
+    /**
+     *
+     * @param fileName Original filename as defined by sender.
+     */
     public void setFileName(@Nullable String fileName) {
         this.fileName = fileName;
     }
 
+    /**
+     *
+     * @return MIME type of the file as defined by sender.
+     */
     @Nullable
     public String getMimeType() {
         return mimeType;
     }
 
+    /**
+     *
+     * @param mimeType MIME type of the file as defined by sender.
+     */
     public void setMimeType(@Nullable String mimeType) {
         this.mimeType = mimeType;
     }
 
+    /**
+     *
+     * @return File size.
+     */
     @Nullable
     public Integer getFileSize() {
         return fileSize;
     }
 
+    /**
+     *
+     * @param fileSize File size.
+     */
     public void setFileSize(@Nullable Integer fileSize) {
         this.fileSize = fileSize;
     }
-
 
     @Override
     public String toString() {

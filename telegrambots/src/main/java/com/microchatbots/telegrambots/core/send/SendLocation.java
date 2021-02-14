@@ -33,14 +33,14 @@ public class SendLocation extends Send {
     public static final String SEND_LOCATION = "sendLocation";
 
     /**
-     * Longitude of the location
+     * Longitude of the location.
      */
     @NonNull
     @NotNull
     private Float longitude;
 
     /**
-     * Latitude of the location
+     * Latitude of the location.
      *
      */
     @NonNull
@@ -48,7 +48,7 @@ public class SendLocation extends Send {
     private Float latitude;
 
     /**
-     * Period in seconds for which the location will be updated
+     * Period in seconds for which the location will be updated.
      */
     @Nullable
     @JsonProperty("live_period")
@@ -58,29 +58,53 @@ public class SendLocation extends Send {
         super(SEND_LOCATION);
     }
 
+    /**
+     *
+     * @return Longitude of the location
+     */
     @NonNull
     public Float getLongitude() {
         return longitude;
     }
 
+    /**
+     *
+     * @param longitude Longitude of the location
+     */
     public void setLongitude(@NonNull Float longitude) {
         this.longitude = longitude;
     }
 
+    /**
+     *
+     * @return Latitude of the location.
+     */
     @NonNull
     public Float getLatitude() {
         return latitude;
     }
 
+    /**
+     *
+     * @param latitude Latitude of the location.
+     */
     public void setLatitude(@NonNull Float latitude) {
         this.latitude = latitude;
     }
 
+    /**
+     *
+     * @return Period in seconds for which the location will be updated.
+     */
     @Nullable
     public Integer getLivePeriod() {
         return livePeriod;
     }
 
+    /**
+     *
+     * @param livePeriod Period in seconds for which the location will be updated.
+     */
     public void setLivePeriod(@Nullable Integer livePeriod) {
         this.livePeriod = livePeriod;
     }

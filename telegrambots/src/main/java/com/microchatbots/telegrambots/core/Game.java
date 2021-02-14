@@ -35,14 +35,14 @@ import java.util.stream.Collectors;
 public class Game {
 
     /**
-     * Title of the game
+     * Title of the game.
      */
     @NonNull
     @NotBlank
     private String title;
 
     /**
-     * Description of the game
+     * Description of the game.
      */
     @NonNull
     @NotBlank
@@ -69,7 +69,7 @@ public class Game {
     private List<MessageEntity> textEntities;
 
     /**
-     * Animation that will be displayed in the game message in chats. Upload via BotFather
+     * Animation that will be displayed in the game message in chats. Upload via BotFather.
      */
     @Nullable
     Animation animation;
@@ -77,56 +77,104 @@ public class Game {
     public Game() {
     }
 
+    /**
+     *
+     * @return Title of the game.
+     */
     @NonNull
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title Title of the game.
+     */
     public void setTitle(@NonNull String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return Description of the game.
+     */
     @NonNull
     public String getDescription() {
         return description;
     }
 
+    /**
+     *
+     * @param description Description of the game.
+     */
     public void setDescription(@NonNull String description) {
         this.description = description;
     }
 
+    /**
+     *
+     * @return Photo that will be displayed in the game message in chats.
+     */
     @NonNull
     public List<PhotoSize> getPhoto() {
         return photo;
     }
 
+    /**
+     *
+     * @param photo Photo that will be displayed in the game message in chats.
+     */
     public void setPhoto(@NonNull List<PhotoSize> photo) {
         this.photo = photo;
     }
 
+    /**
+     *
+     * @return Brief description of the game or high scores included in the game message.
+     */
     @Nullable
     public String getText() {
         return text;
     }
 
+    /**
+     *
+     * @param text Brief description of the game or high scores included in the game message.
+     */
     public void setText(@Nullable String text) {
         this.text = text;
     }
 
+    /**
+     *
+     * @return Special entities that appear in text, such as usernames, URLs, bot commands, etc.
+     */
     @Nullable
     public List<MessageEntity> getTextEntities() {
         return textEntities;
     }
 
+    /**
+     *
+     * @param textEntities Special entities that appear in text, such as usernames, URLs, bot commands, etc.
+     */
     public void setTextEntities(@Nullable List<MessageEntity> textEntities) {
         this.textEntities = textEntities;
     }
 
+    /**
+     *
+     * @return Animation that will be displayed in the game message in chats. Upload via BotFather.
+     */
     @Nullable
     public Animation getAnimation() {
         return animation;
     }
 
+    /**
+     *
+     * @param animation Animation that will be displayed in the game message in chats. Upload via BotFather.
+     */
     public void setAnimation(@Nullable Animation animation) {
         this.animation = animation;
     }

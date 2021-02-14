@@ -47,7 +47,7 @@ public class Update {
     private Message message;
 
     /**
-     * New version of a message that is known to the bot and was edited
+     * New version of a message that is known to the bot and was edited.
      */
     @Nullable
     @JsonProperty("edited_message")
@@ -61,14 +61,14 @@ public class Update {
     private Message channelPost;
 
     /**
-     * New version of a channel post that is known to the bot and was edited
+     * New version of a channel post that is known to the bot and was edited.
      */
     @Nullable
     @JsonProperty("edited_channel_post")
     private Message editedChannelPost;
 
     /**
-     * New incoming inline query
+     * New incoming inline query.
      */
     @Nullable
     @JsonProperty("inline_query")
@@ -82,21 +82,21 @@ public class Update {
     private ChosenInlineResult chosenInlineResult;
 
     /**
-     * New incoming callback query
+     * New incoming callback query.
      */
     @Nullable
     @JsonProperty("callback_query")
     private CallbackQuery callbackQuery;
 
     /**
-     *  New incoming shipping query. Only for invoices with flexible price
+     *  New incoming shipping query. Only for invoices with flexible price.
      */
     @Nullable
     @JsonProperty("shipping_query")
     private ShippingQuery shippingQuery;
 
     /**
-     *  New incoming pre-checkout query. Contains full information about checkout
+     *  New incoming pre-checkout query. Contains full information about checkout.
      */
     @Nullable
     @JsonProperty("pre_checkout_query")
@@ -118,110 +118,206 @@ public class Update {
     public Update() {
     }
 
+    /**
+     *
+     * @return The update‘s unique identifier.
+     */
     @NonNull
     public Integer getUpdateId() {
         return updateId;
     }
 
+    /**
+     *
+     * @param updateId The update‘s unique identifier.
+     */
     public void setUpdateId(@NonNull Integer updateId) {
         this.updateId = updateId;
     }
 
+    /**
+     *
+     * @return New incoming message of any kind — text, photo, sticker, etc.
+     */
     @Nullable
     public Message getMessage() {
         return message;
     }
 
+    /**
+     *
+     * @param message New incoming message of any kind — text, photo, sticker, etc.
+     */
     public void setMessage(@Nullable Message message) {
         this.message = message;
     }
 
+    /**
+     *
+     * @return New version of a message that is known to the bot and was edited.
+     */
     @Nullable
     public Message getEditedMessage() {
         return editedMessage;
     }
 
+    /**
+     *
+     * @param editedMessage New version of a message that is known to the bot and was edited.
+     */
     public void setEditedMessage(@Nullable Message editedMessage) {
         this.editedMessage = editedMessage;
     }
 
+    /**
+     *
+     * @return New incoming channel post of any kind — text, photo, sticker, etc.
+     */
     @Nullable
     public Message getChannelPost() {
         return channelPost;
     }
 
+    /**
+     *
+     * @param channelPost New incoming channel post of any kind — text, photo, sticker, etc.
+     */
     public void setChannelPost(@Nullable Message channelPost) {
         this.channelPost = channelPost;
     }
 
+    /**
+     *
+     * @return New version of a channel post that is known to the bot and was edited.
+     */
     @Nullable
     public Message getEditedChannelPost() {
         return editedChannelPost;
     }
 
+    /**
+     *
+     * @param editedChannelPost New version of a channel post that is known to the bot and was edited.
+     */
     public void setEditedChannelPost(@Nullable Message editedChannelPost) {
         this.editedChannelPost = editedChannelPost;
     }
 
+    /**
+     *
+     * @return New incoming inline query.
+     */
     @Nullable
     public InlineQuery getInlineQuery() {
         return inlineQuery;
     }
 
+    /**
+     *
+     * @param inlineQuery New incoming inline query.
+     */
     public void setInlineQuery(@Nullable InlineQuery inlineQuery) {
         this.inlineQuery = inlineQuery;
     }
 
+    /**
+     *
+     * @return The result of an inline query that was chosen by a user and sent to their chat partner
+     */
     @Nullable
     public ChosenInlineResult getChosenInlineResult() {
         return chosenInlineResult;
     }
 
+    /**
+     *
+     * @param chosenInlineResult The result of an inline query that was chosen by a user and sent to their chat partner
+     */
     public void setChosenInlineResult(@Nullable ChosenInlineResult chosenInlineResult) {
         this.chosenInlineResult = chosenInlineResult;
     }
 
+    /**
+     *
+     * @return New incoming callback query.
+     */
     @Nullable
     public CallbackQuery getCallbackQuery() {
         return callbackQuery;
     }
 
+    /**
+     *
+     * @param callbackQuery New incoming callback query.
+     */
     public void setCallbackQuery(@Nullable CallbackQuery callbackQuery) {
         this.callbackQuery = callbackQuery;
     }
 
+    /**
+     *
+     * @return New incoming shipping query. Only for invoices with flexible price.
+     */
     @Nullable
     public ShippingQuery getShippingQuery() {
         return shippingQuery;
     }
 
+    /**
+     *
+     * @param shippingQuery New incoming shipping query. Only for invoices with flexible price.
+     */
     public void setShippingQuery(@Nullable ShippingQuery shippingQuery) {
         this.shippingQuery = shippingQuery;
     }
 
+    /**
+     *
+     * @return New incoming pre-checkout query. Contains full information about checkout.
+     */
     @Nullable
     public PreCheckoutQuery getPreCheckoutQuery() {
         return preCheckoutQuery;
     }
 
+    /**
+     *
+     * @param preCheckoutQuery New incoming pre-checkout query. Contains full information about checkout.
+     */
     public void setPreCheckoutQuery(@Nullable PreCheckoutQuery preCheckoutQuery) {
         this.preCheckoutQuery = preCheckoutQuery;
     }
 
+    /**
+     *
+     * @return New poll state. Bots receive only updates about stopped polls and polls, which are sent by the bot.
+     */
     @Nullable
     public Poll getPoll() {
         return poll;
     }
 
+    /**
+     *
+     * @param poll New poll state. Bots receive only updates about stopped polls and polls, which are sent by the bot.
+     */
     public void setPoll(@Nullable Poll poll) {
         this.poll = poll;
     }
 
+    /**
+     *
+     * @return A user changed their answer in a non-anonymous poll. Bots receive new votes only in polls that were sent by the bot itself.
+     */
     @Nullable
     public PollAnswer getPollAnswer() {
         return pollAnswer;
     }
 
+    /**
+     *
+     * @param pollAnswer A user changed their answer in a non-anonymous poll. Bots receive new votes only in polls that were sent by the bot itself.
+     */
     public void setPollAnswer(@Nullable PollAnswer pollAnswer) {
         this.pollAnswer = pollAnswer;
     }

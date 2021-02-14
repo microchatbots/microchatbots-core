@@ -31,21 +31,21 @@ import javax.validation.constraints.NotNull;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Invoice {
     /**
-     * Product name
+     * Product name.
      */
     @NonNull
     @NotBlank
     private String title;
 
     /**
-     * Product description
+     * Product description.
      */
     @NonNull
     @NotBlank
     private String description;
 
     /**
-     * Unique bot deep-linking parameter that can be used to generate this invoice
+     * Unique bot deep-linking parameter that can be used to generate this invoice.
      */
     @JsonProperty("start_parameter")
     @NonNull
@@ -53,7 +53,7 @@ public class Invoice {
     private String startParameter;
 
     /**
-     * Three-letter ISO 4217 currency code
+     * Three-letter ISO 4217 currency code.
      */
     @NonNull
     @NotBlank
@@ -70,47 +70,87 @@ public class Invoice {
     public Invoice() {
     }
 
+    /**
+     *
+     * @return Product name.
+     */
     @NonNull
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title Product name.
+     */
     public void setTitle(@NonNull String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return Product description.
+     */
     @NonNull
     public String getDescription() {
         return description;
     }
 
+    /**
+     *
+     * @param description Product description.
+     */
     public void setDescription(@NonNull String description) {
         this.description = description;
     }
 
+    /**
+     *
+     * @return Unique bot deep-linking parameter that can be used to generate this invoice.
+     */
     @NonNull
     public String getStartParameter() {
         return startParameter;
     }
 
+    /**
+     *
+     * @param startParameter Unique bot deep-linking parameter that can be used to generate this invoice.
+     */
     public void setStartParameter(@NonNull String startParameter) {
         this.startParameter = startParameter;
     }
 
+    /**
+     *
+     * @return Three-letter ISO 4217 currency code.
+     */
     @NonNull
     public String getCurrency() {
         return currency;
     }
 
+    /**
+     *
+     * @param currency Three-letter ISO 4217 currency code.
+     */
     public void setCurrency(@NonNull String currency) {
         this.currency = currency;
     }
 
+    /**
+     *
+     * @return Total price in the smallest units of the currency (integer, not float/double).
+     */
     @NonNull
     public Integer getTotalAmount() {
         return totalAmount;
     }
 
+    /**
+     *
+     * @param totalAmount Total price in the smallest units of the currency (integer, not float/double).
+     */
     public void setTotalAmount(@NonNull Integer totalAmount) {
         this.totalAmount = totalAmount;
     }

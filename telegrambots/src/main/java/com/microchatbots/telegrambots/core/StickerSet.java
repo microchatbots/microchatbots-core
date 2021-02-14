@@ -35,21 +35,21 @@ import java.util.stream.Collectors;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class StickerSet {
     /**
-     * Sticker set name
+     * Sticker set name.
      */
     @NonNull
     @NotBlank
     private String name;
 
     /**
-     * Sticker set title
+     * Sticker set title.
      */
     @NonNull
     @NotBlank
     private String title;
 
     /**
-     * True, if the sticker set contains animated stickers
+     * True, if the sticker set contains animated stickers.
      */
     @JsonProperty("is_animated")
     @NonNull
@@ -57,7 +57,7 @@ public class StickerSet {
     private Boolean animated;
 
     /**
-     * True, if the sticker set contains masks
+     * True, if the sticker set contains masks.
      */
     @JsonProperty("contains_masks")
     @NonNull
@@ -65,14 +65,14 @@ public class StickerSet {
     private Boolean containsMasks;
 
     /**
-     * List of all set stickers
+     * List of all set stickers.
      */
     @NonNull
     @NotNull
     private List<@Valid Sticker> stickers;
 
     /**
-     * Sticker set thumbnail in the .WEBP or .TGS format
+     * Sticker set thumbnail in the .WEBP or .TGS format.
      */
     @Nullable
     private PhotoSize thumb;
@@ -80,56 +80,104 @@ public class StickerSet {
     public StickerSet() {
     }
 
+    /**
+     *
+     * @return Sticker set name.
+     */
     @NonNull
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name Sticker set name.
+     */
     public void setName(@NonNull String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return Sticker set title.
+     */
     @NonNull
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title Sticker set title.
+     */
     public void setTitle(@NonNull String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return True, if the sticker set contains animated stickers.
+     */
     @NonNull
     public Boolean getAnimated() {
         return animated;
     }
 
+    /**
+     *
+     * @param animated True, if the sticker set contains animated stickers.
+     */
     public void setAnimated(@NonNull Boolean animated) {
         this.animated = animated;
     }
 
+    /**
+     *
+     * @return True, if the sticker set contains masks.
+     */
     @NonNull
     public Boolean getContainsMasks() {
         return containsMasks;
     }
 
+    /**
+     *
+     * @param containsMasks True, if the sticker set contains masks.
+     */
     public void setContainsMasks(@NonNull Boolean containsMasks) {
         this.containsMasks = containsMasks;
     }
 
+    /**
+     *
+     * @return List of all set stickers.
+     */
     @NonNull
     public List<Sticker> getStickers() {
         return stickers;
     }
 
+    /**
+     *
+     * @param stickers List of all set stickers.
+     */
     public void setStickers(@NonNull List<Sticker> stickers) {
         this.stickers = stickers;
     }
 
+    /**
+     *
+     * @return Sticker set thumbnail in the .WEBP or .TGS format.
+     */
     @Nullable
     public PhotoSize getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Sticker set thumbnail in the .WEBP or .TGS format.
+     */
     public void setThumb(@Nullable PhotoSize thumb) {
         this.thumb = thumb;
     }

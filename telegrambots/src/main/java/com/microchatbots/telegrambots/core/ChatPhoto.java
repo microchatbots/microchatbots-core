@@ -63,38 +63,70 @@ public class ChatPhoto {
     public ChatPhoto() {
     }
 
+    /**
+     *
+     * @return File identifier of small (160x160) chat photo.
+     */
     @NonNull
     public String getSmallFileId() {
         return smallFileId;
     }
 
+    /**
+     *
+     * @param smallFileId File identifier of small (160x160) chat photo.
+     */
     public void setSmallFileId(@NonNull String smallFileId) {
         this.smallFileId = smallFileId;
     }
 
+    /**
+     *
+     * @return File identifier of big (640x640) chat photo.
+     */
     @NonNull
     public String getBigFileId() {
         return bigFileId;
     }
 
+    /**
+     *
+     * @param bigFileId File identifier of big (640x640) chat photo.
+     */
     public void setBigFileId(@NonNull String bigFileId) {
         this.bigFileId = bigFileId;
     }
 
+    /**
+     *
+     * @return Unique file identifier of small (160x160) chat photo
+     */
     @NonNull
     public String getSmallFileUniqueId() {
         return smallFileUniqueId;
     }
 
+    /**
+     *
+     * @param smallFileUniqueId Unique file identifier of small (160x160) chat photo
+     */
     public void setSmallFileUniqueId(@NonNull String smallFileUniqueId) {
         this.smallFileUniqueId = smallFileUniqueId;
     }
 
+    /**
+     *
+     * @return Unique file identifier of big (640x640) chat photo
+     */
     @NonNull
     public String getBigFileUniqueId() {
         return bigFileUniqueId;
     }
 
+    /**
+     *
+     * @param bigFileUniqueId Unique file identifier of big (640x640) chat photo
+     */
     public void setBigFileUniqueId(@NonNull String bigFileUniqueId) {
         this.bigFileUniqueId = bigFileUniqueId;
     }

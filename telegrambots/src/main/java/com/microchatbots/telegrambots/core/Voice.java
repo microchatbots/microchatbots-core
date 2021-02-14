@@ -62,7 +62,7 @@ public class Voice {
     private String mimeType;
 
     /**
-     * File size
+     * File size.
      */
     @Nullable
     @JsonProperty("file_size")
@@ -71,47 +71,87 @@ public class Voice {
     public Voice() {
     }
 
+    /**
+     *
+     * @return Identifier for this file.
+     */
     @NonNull
     public String getFileId() {
         return fileId;
     }
 
+    /**
+     *
+     * @param fileId Identifier for this file.
+     */
     public void setFileId(@NonNull String fileId) {
         this.fileId = fileId;
     }
 
+    /**
+     *
+     * @return Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     @NonNull
     public String getFileUniqueId() {
         return fileUniqueId;
     }
 
+    /**
+     *
+     * @param fileUniqueId Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     public void setFileUniqueId(@NonNull String fileUniqueId) {
         this.fileUniqueId = fileUniqueId;
     }
 
+    /**
+     *
+     * @return Duration of the audio in seconds as defined by sender.
+     */
     @NonNull
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Duration of the audio in seconds as defined by sender.
+     */
     public void setDuration(@NonNull Integer duration) {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return MIME type of the file as defined by sender.
+     */
     @Nullable
     public String getMimeType() {
         return mimeType;
     }
 
+    /**
+     *
+     * @param mimeType MIME type of the file as defined by sender.
+     */
     public void setMimeType(@Nullable String mimeType) {
         this.mimeType = mimeType;
     }
 
+    /**
+     *
+     * @return File size.
+     */
     @Nullable
     public Integer getFileSize() {
         return fileSize;
     }
 
+    /**
+     *
+     * @param fileSize File size.
+     */
     public void setFileSize(@Nullable Integer fileSize) {
         this.fileSize = fileSize;
     }

@@ -34,7 +34,7 @@ import javax.validation.constraints.NotNull;
 public class Venue {
 
     /**
-     * Venue location
+     * Venue location.
      */
     @NonNull
     @NotNull
@@ -42,11 +42,12 @@ public class Venue {
     private Location location;
 
     /**
-     * Name of the venue
+     * Name of the venue.
      */
     @NonNull
     @NotBlank
     private String title;
+
     /**
      * Address of the venue.
      */
@@ -71,47 +72,87 @@ public class Venue {
     public Venue() {
     }
 
+    /**
+     *
+     * @return Venue location.
+     */
     @NonNull
     public Location getLocation() {
         return location;
     }
 
+    /**
+     *
+     * @param location Venue location.
+     */
     public void setLocation(@NonNull Location location) {
         this.location = location;
     }
 
+    /**
+     *
+     * @return Name of the venue.
+     */
     @NonNull
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title Name of the venue.
+     */
     public void setTitle(@NonNull String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return Address of the venue.
+     */
     @NonNull
     public String getAddress() {
         return address;
     }
 
+    /**
+     *
+     * @param address Address of the venue.
+     */
     public void setAddress(@NonNull String address) {
         this.address = address;
     }
 
+    /**
+     *
+     * @return Foursquare identifier of the venue.
+     */
     @Nullable
     public String getFoursquareId() {
         return foursquareId;
     }
 
+    /**
+     *
+     * @param foursquareId Foursquare identifier of the venue.
+     */
     public void setFoursquareId(@Nullable String foursquareId) {
         this.foursquareId = foursquareId;
     }
 
+    /**
+     *
+     * @return Foursquare type of the venue
+     */
     @Nullable
     public String getFoursquareType() {
         return foursquareType;
     }
 
+    /**
+     *
+     * @param foursquareType Foursquare type of the venue
+     */
     public void setFoursquareType(@Nullable String foursquareType) {
         this.foursquareType = foursquareType;
     }
