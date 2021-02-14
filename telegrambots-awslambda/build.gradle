@@ -5,7 +5,7 @@ dependencies {
     implementation "io.micronaut:micronaut-validation"
     api "io.micronaut:micronaut-inject"
     api("io.micronaut.aws:micronaut-function-aws")
-    api("com.amazonaws:aws-lambda-java-events:3.4.0")
+    api("com.amazonaws:aws-lambda-java-events:3.7.0")
     api project(":telegrambots")
     testImplementation("org.spockframework:spock-core:${spockVersion}") {
         exclude module:'groovy-all'
