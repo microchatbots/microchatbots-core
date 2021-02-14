@@ -36,7 +36,7 @@ public class ResponseParameters {
     private Integer migrateToChatId;
 
     /**
-     * In case of exceeding flood control, the number of seconds left to wait before the request can be repeated
+     * In case of exceeding flood control, the number of seconds left to wait before the request can be repeated.
      */
     @Nullable
     @JsonProperty("retry_after")

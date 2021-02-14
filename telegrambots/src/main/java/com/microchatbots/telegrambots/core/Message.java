@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
 public class Message {
 
     /**
-     * Unique message identifier inside this chat
+     * Unique message identifier inside this chat.
      */
     @JsonProperty("message_id")
     @NonNull
@@ -43,7 +43,7 @@ public class Message {
     private Integer messageId;
 
     /**
-     * Sender, empty for messages sent to channels
+     * Sender, empty for messages sent to channels.
      */
     @Nullable
     @Valid
@@ -51,14 +51,14 @@ public class Message {
     private User from;
 
     /**
-     * Date the message was sent in Unix time
+     * Date the message was sent in Unix time.
      */
     @NonNull
     @NotNull
     private Integer date;
 
     /**
-     * Conversation the message belongs to
+     * Conversation the message belongs to.
      */
     @NonNull
     @Valid
@@ -66,7 +66,7 @@ public class Message {
     private Chat chat;
 
     /**
-     * For forwarded messages, sender of the original message
+     * For forwarded messages, sender of the original message.
      */
     @Nullable
     @Valid
@@ -96,7 +96,7 @@ public class Message {
     private String forwardSignature;
 
     /**
-     * Sender's name for messages forwarded from users who disallow adding a link to their account in forwarded messages
+     * Sender's name for messages forwarded from users who disallow adding a link to their account in forwarded messages.
      */
     @Nullable
     @JsonProperty("forward_sender_name")
@@ -142,9 +142,8 @@ public class Message {
     @Nullable
     private String text;
 
-
     /**
-     * For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text
+     * For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text.
      */
     @Nullable
     private List<MessageEntity> entities;
@@ -187,7 +186,7 @@ public class Message {
     private List<PhotoSize> photo;
 
     /**
-     * Message is a sticker, information about the sticker
+     * Message is a sticker, information about the sticker.
      */
     @Nullable
     private Sticker sticker;
@@ -199,7 +198,7 @@ public class Message {
     private Video video;
 
     /**
-     * Message is a voice message, information about the file
+     * Message is a voice message, information about the file.
      */
     @Nullable
     private Voice voice;
@@ -212,7 +211,7 @@ public class Message {
     private VideoNote videoNote;
 
     /**
-     * Caption for the animation, audio, document, photo, video or voice, 0-1024 characters
+     * Caption for the animation, audio, document, photo, video or voice, 0-1024 characters.
      */
     @Nullable
     private String caption;
@@ -236,7 +235,7 @@ public class Message {
     private Venue venue;
 
     /**
-     *  Message is a native poll, information about the poll.
+     * Message is a native poll, information about the poll.
      */
     @Nullable
     private Poll poll;
@@ -248,9 +247,8 @@ public class Message {
     @JsonProperty("new_chat_members")
     private List<User> newChatMembers;
 
-
     /**
-     * A member was removed from the group, information about them (this member may be the bot itself)
+     * A member was removed from the group, information about them (this member may be the bot itself).
      */
     @Nullable
     @JsonProperty("left_chat_member")
@@ -262,7 +260,6 @@ public class Message {
     @JsonProperty("new_chat_title")
     @Nullable
     private String newChatTitle;
-
 
     /**
      *  A chat photo was change to this value.
@@ -279,7 +276,7 @@ public class Message {
     private Boolean deleteChatPhoto;
 
     /**
-     * Service message: the group has been created
+     * Service message: the group has been created.
      */
     @Nullable
     @JsonProperty("group_chat_created")
@@ -308,7 +305,7 @@ public class Message {
 
 
     /**
-     * The supergroup has been migrated from a group with the specified identifier. This number may be greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier
+     * The supergroup has been migrated from a group with the specified identifier. This number may be greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.
      */
     @Nullable
     @JsonProperty("migrate_from_chat_id")
@@ -351,431 +348,807 @@ public class Message {
      */
     @Nullable
     @JsonProperty("reply_markup")
-    InlineKeyboardMarkup replyMarkup;
+    private InlineKeyboardMarkup replyMarkup;
 
     public Message() {
 
     }
 
+    /**
+     *
+     * @return Unique message identifier inside this chat.
+     */
     @NonNull
     public Integer getMessageId() {
         return messageId;
     }
 
+    /**
+     *
+     * @param messageId Unique message identifier inside this chat.
+     */
     public void setMessageId(@NonNull Integer messageId) {
         this.messageId = messageId;
     }
 
+    /**
+     *
+     * @return Sender, empty for messages sent to channels.
+     */
     @Nullable
     public User getFrom() {
         return from;
     }
 
+    /**
+     *
+     * @param from Sender, empty for messages sent to channels.
+     */
     public void setFrom(@Nullable User from) {
         this.from = from;
     }
 
+    /**
+     *
+     * @return Date the message was sent in Unix time.
+     */
     @NonNull
     public Integer getDate() {
         return date;
     }
 
+    /**
+     *
+     * @param date Date the message was sent in Unix time.
+     */
     public void setDate(@NonNull Integer date) {
         this.date = date;
     }
 
+    /**
+     *
+     * @return Conversation the message belongs to.
+     */
     @NonNull
     public Chat getChat() {
         return chat;
     }
 
+    /**
+     *
+     * @param chat Conversation the message belongs to.
+     */
     public void setChat(@NonNull Chat chat) {
         this.chat = chat;
     }
 
+    /**
+     *
+     * @return For forwarded messages, sender of the original message.
+     */
     @Nullable
     public User getForwardFrom() {
         return forwardFrom;
     }
 
+    /**
+     *
+     * @param forwardFrom For forwarded messages, sender of the original message.
+     */
     public void setForwardFrom(@Nullable User forwardFrom) {
         this.forwardFrom = forwardFrom;
     }
 
+    /**
+     *
+     * @return For messages forwarded from channels, information about the original channel.
+     */
     @Nullable
     public Chat getForwardFromChat() {
         return forwardFromChat;
     }
 
+    /**
+     *
+     * @param forwardFromChat For messages forwarded from channels, information about the original channel.
+     */
     public void setForwardFromChat(@Nullable Chat forwardFromChat) {
         this.forwardFromChat = forwardFromChat;
     }
 
+    /**
+     *
+     * @return For messages forwarded from channels, identifier of the original message in the channel.
+     */
     @Nullable
     public Integer getForwardFromMessageId() {
         return forwardFromMessageId;
     }
 
+    /**
+     *
+     * @param forwardFromMessageId For messages forwarded from channels, identifier of the original message in the channel.
+     */
     public void setForwardFromMessageId(@Nullable Integer forwardFromMessageId) {
         this.forwardFromMessageId = forwardFromMessageId;
     }
 
+    /**
+     *
+     * @return For messages forwarded from channels, signature of the post author if present.
+     */
     @Nullable
     public String getForwardSignature() {
         return forwardSignature;
     }
 
+    /**
+     *
+     * @param forwardSignature For messages forwarded from channels, signature of the post author if present.
+     */
     public void setForwardSignature(@Nullable String forwardSignature) {
         this.forwardSignature = forwardSignature;
     }
 
+    /**
+     *
+     * @return Sender's name for messages forwarded from users who disallow adding a link to their account in forwarded messages.
+     */
     @Nullable
     public String getForwardSenderName() {
         return forwardSenderName;
     }
 
+    /**
+     *
+     * @param forwardSenderName Sender's name for messages forwarded from users who disallow adding a link to their account in forwarded messages.
+     */
     public void setForwardSenderName(@Nullable String forwardSenderName) {
         this.forwardSenderName = forwardSenderName;
     }
 
+    /**
+     *
+     * @return For forwarded messages, date the original message was sent in Unix time
+     */
     @Nullable
     public Integer getForwardDate() {
         return forwardDate;
     }
 
+    /**
+     *
+     * @param forwardDate For forwarded messages, date the original message was sent in Unix time
+     */
     public void setForwardDate(@Nullable Integer forwardDate) {
         this.forwardDate = forwardDate;
     }
 
+    /**
+     *
+     * @return For replies, the original message. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply.
+     */
     @Nullable
     public Message getReplyToMessage() {
         return replyToMessage;
     }
 
+    /**
+     *
+     * @param replyToMessage For replies, the original message. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply.
+     */
     public void setReplyToMessage(@Nullable Message replyToMessage) {
         this.replyToMessage = replyToMessage;
     }
 
+    /**
+     *
+     * @return Date the message was last edited in Unix time.
+     */
     @Nullable
     public Integer getEditDate() {
         return editDate;
     }
 
+    /**
+     *
+     * @param editDate Date the message was last edited in Unix time.
+     */
     public void setEditDate(@Nullable Integer editDate) {
         this.editDate = editDate;
     }
 
+    /**
+     *
+     * @return The unique identifier of a media message group this message belongs to.
+     */
     @Nullable
     public String getMediaGroupId() {
         return mediaGroupId;
     }
 
+    /**
+     *
+     * @param mediaGroupId The unique identifier of a media message group this message belongs to.
+     */
     public void setMediaGroupId(@Nullable String mediaGroupId) {
         this.mediaGroupId = mediaGroupId;
     }
 
+    /**
+     *
+     * @return Signature of the post author for messages in channels.
+     */
     @Nullable
     public String getAuthorSignature() {
         return authorSignature;
     }
 
+    /**
+     *
+     * @param authorSignature Signature of the post author for messages in channels.
+     */
     public void setAuthorSignature(@Nullable String authorSignature) {
         this.authorSignature = authorSignature;
     }
 
+    /**
+     *
+     * @return For text messages, the actual UTF-8 text of the message, 0-4096 characters.
+     */
     @Nullable
     public String getText() {
         return text;
     }
 
+    /**
+     *
+     * @param text For text messages, the actual UTF-8 text of the message, 0-4096 characters.
+     */
     public void setText(@Nullable String text) {
         this.text = text;
     }
 
+    /**
+     *
+     * @return For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text.
+     */
     @Nullable
     public List<MessageEntity> getEntities() {
         return entities;
     }
 
+    /**
+     *
+     * @param entities For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text.
+     */
     public void setEntities(@Nullable List<MessageEntity> entities) {
         this.entities = entities;
     }
 
+    /**
+     *
+     * @return For messages with a caption, special entities like usernames, URLs, bot commands, etc. that appear in the caption.
+     */
     @Nullable
     public List<MessageEntity> getCaptionEntities() {
         return captionEntities;
     }
 
+    /**
+     *
+     * @param captionEntities For messages with a caption, special entities like usernames, URLs, bot commands, etc. that appear in the caption.
+     */
     public void setCaptionEntities(@Nullable List<MessageEntity> captionEntities) {
         this.captionEntities = captionEntities;
     }
 
+    /**
+     *
+     * @return Message is an audio file, information about the file.
+     */
     @Nullable
     public Audio getAudio() {
         return audio;
     }
 
+    /**
+     *
+     * @param audio Message is an audio file, information about the file.
+     */
     public void setAudio(@Nullable Audio audio) {
         this.audio = audio;
     }
 
+    /**
+     *
+     * @return Message is a general file, information about the file.
+     */
     @Nullable
     public Document getDocument() {
         return document;
     }
 
+    /**
+     *
+     * @param document Message is a general file, information about the file.
+     */
     public void setDocument(@Nullable Document document) {
         this.document = document;
     }
 
+    /**
+     *
+     * @return Message is an animation, information about the animation. For backward compatibility, when this field is set, the document field will also be set.
+     */
     @Nullable
     public Animation getAnimation() {
         return animation;
     }
 
+    /**
+     *
+     * @param animation Message is an animation, information about the animation. For backward compatibility, when this field is set, the document field will also be set.
+     */
     public void setAnimation(@Nullable Animation animation) {
         this.animation = animation;
     }
 
+    /**
+     *
+     * @return Message is a game, information about the game.
+     */
     @Nullable
     public Game getGame() {
         return game;
     }
 
+    /**
+     *
+     * @param game Message is a game, information about the game.
+     */
     public void setGame(@Nullable Game game) {
         this.game = game;
     }
 
+    /**
+     *
+     * @return Message is a photo, available sizes of the photo
+     */
     @Nullable
     public List<PhotoSize> getPhoto() {
         return photo;
     }
 
+    /**
+     *
+     * @param photo Message is a photo, available sizes of the photo
+     */
     public void setPhoto(@Nullable List<PhotoSize> photo) {
         this.photo = photo;
     }
 
+    /**
+     *
+     * @return Message is a sticker, information about the sticker.
+     */
     @Nullable
     public Sticker getSticker() {
         return sticker;
     }
 
+    /**
+     *
+     * @param sticker Message is a sticker, information about the sticker.
+     */
     public void setSticker(@Nullable Sticker sticker) {
         this.sticker = sticker;
     }
 
+    /**
+     *
+     * @return Message is a video, information about the video.
+     */
     @Nullable
     public Video getVideo() {
         return video;
     }
 
+    /**
+     *
+     * @param video Message is a video, information about the video.
+     */
     public void setVideo(@Nullable Video video) {
         this.video = video;
     }
 
+    /**
+     *
+     * @return Message is a voice message, information about the file.
+     */
     @Nullable
     public Voice getVoice() {
         return voice;
     }
 
+    /**
+     *
+     * @param voice Message is a voice message, information about the file.
+     */
     public void setVoice(@Nullable Voice voice) {
         this.voice = voice;
     }
 
+    /**
+     *
+     * @return Message is a video note, information about the video message.
+     */
     @Nullable
     public VideoNote getVideoNote() {
         return videoNote;
     }
 
+    /**
+     *
+     * @param videoNote Message is a video note, information about the video message.
+     */
     public void setVideoNote(@Nullable VideoNote videoNote) {
         this.videoNote = videoNote;
     }
 
+    /**
+     *
+     * @return Caption for the animation, audio, document, photo, video or voice, 0-1024 characters.
+     */
     @Nullable
     public String getCaption() {
         return caption;
     }
 
+    /**
+     *
+     * @param caption Caption for the animation, audio, document, photo, video or voice, 0-1024 characters.
+     */
     public void setCaption(@Nullable String caption) {
         this.caption = caption;
     }
 
+    /**
+     *
+     * @return Message is a shared contact, information about the contact.
+     */
     @Nullable
     public Contact getContact() {
         return contact;
     }
 
+    /**
+     *
+     * @param contact Message is a shared contact, information about the contact.
+     */
     public void setContact(@Nullable Contact contact) {
         this.contact = contact;
     }
 
+    /**
+     *
+     * @return Message is a shared location, information about the location.
+     */
     @Nullable
     public Location getLocation() {
         return location;
     }
 
+    /**
+     *
+     * @param location Message is a shared location, information about the location.
+     */
     public void setLocation(@Nullable Location location) {
         this.location = location;
     }
 
+    /**
+     *
+     * @return Message is a venue, information about the venue.
+     */
     @Nullable
     public Venue getVenue() {
         return venue;
     }
 
+    /**
+     *
+     * @param venue Message is a venue, information about the venue.
+     */
     public void setVenue(@Nullable Venue venue) {
         this.venue = venue;
     }
 
+    /**
+     *
+     * @return Message is a native poll, information about the poll.
+     */
     @Nullable
     public Poll getPoll() {
         return poll;
     }
 
+    /**
+     *
+     * @param poll Message is a native poll, information about the poll.
+     */
     public void setPoll(@Nullable Poll poll) {
         this.poll = poll;
     }
 
+    /**
+     *
+     * @return New members that were added to the group or supergroup and information about them (the bot itself may be one of these members).
+     */
     @Nullable
     public List<User> getNewChatMembers() {
         return newChatMembers;
     }
 
+    /**
+     *
+     * @param newChatMembers New members that were added to the group or supergroup and information about them (the bot itself may be one of these members).
+     */
     public void setNewChatMembers(@Nullable List<User> newChatMembers) {
         this.newChatMembers = newChatMembers;
     }
 
+    /**
+     *
+     * @return A member was removed from the group, information about them (this member may be the bot itself).
+     */
     @Nullable
     public User getLeftChatMember() {
         return leftChatMember;
     }
 
+    /**
+     *
+     * @param leftChatMember A member was removed from the group, information about them (this member may be the bot itself).
+     */
     public void setLeftChatMember(@Nullable User leftChatMember) {
         this.leftChatMember = leftChatMember;
     }
 
+    /**
+     *
+     * @return A chat title was changed to this value.
+     */
     @Nullable
     public String getNewChatTitle() {
         return newChatTitle;
     }
 
+    /**
+     *
+     * @param newChatTitle A chat title was changed to this value.
+     */
     public void setNewChatTitle(@Nullable String newChatTitle) {
         this.newChatTitle = newChatTitle;
     }
 
+    /**
+     *
+     * @return A chat photo was change to this value.
+     */
     @Nullable
     public List<PhotoSize> getNewChatPhoto() {
         return newChatPhoto;
     }
 
+    /**
+     *
+     * @param newChatPhoto A chat photo was change to this value.
+     */
     public void setNewChatPhoto(@Nullable List<PhotoSize> newChatPhoto) {
         this.newChatPhoto = newChatPhoto;
     }
 
+    /**
+     *
+     * @return Service message: the chat photo was deleted.
+     */
     @Nullable
     public Boolean getDeleteChatPhoto() {
         return deleteChatPhoto;
     }
 
+    /**
+     *
+     * @param deleteChatPhoto Service message: the chat photo was deleted.
+     */
     public void setDeleteChatPhoto(@Nullable Boolean deleteChatPhoto) {
         this.deleteChatPhoto = deleteChatPhoto;
     }
 
+    /**
+     *
+     * @return Service message: the group has been created.
+     */
     @Nullable
     public Boolean getGroupChatCreated() {
         return groupChatCreated;
     }
 
+    /**
+     *
+     * @param groupChatCreated Service message: the group has been created.
+     */
     public void setGroupChatCreated(@Nullable Boolean groupChatCreated) {
         this.groupChatCreated = groupChatCreated;
     }
 
+    /**
+     *
+     * @return if the supergroup has been created.
+     */
     @Nullable
     public Boolean getSupergroupChatCreated() {
         return supergroupChatCreated;
     }
 
+    /**
+     *
+     * @param supergroupChatCreated if the supergroup has been created.
+     */
     public void setSupergroupChatCreated(@Nullable Boolean supergroupChatCreated) {
         this.supergroupChatCreated = supergroupChatCreated;
     }
 
+    /**
+     *
+     * @return the channel has been created
+     */
     @Nullable
     public Boolean getChannelChatCreated() {
         return channelChatCreated;
     }
 
+    /**
+     *
+     * @param channelChatCreated the channel has been created
+     */
     public void setChannelChatCreated(@Nullable Boolean channelChatCreated) {
         this.channelChatCreated = channelChatCreated;
     }
 
+    /**
+     *
+     * @return The group has been migrated to a supergroup with the specified identifier.
+     */
     @Nullable
     public Integer getMigrateToChatId() {
         return migrateToChatId;
     }
 
+    /**
+     *
+     * @param migrateToChatId The group has been migrated to a supergroup with the specified identifier.
+     */
     public void setMigrateToChatId(@Nullable Integer migrateToChatId) {
         this.migrateToChatId = migrateToChatId;
     }
 
+    /**
+     *
+     * @return The supergroup has been migrated from a group with the specified identifier.
+     */
     @Nullable
     public Integer getMigrateFromChatId() {
         return migrateFromChatId;
     }
 
+    /**
+     *
+     * @param migrateFromChatId The supergroup has been migrated from a group with the specified identifier.
+     */
     public void setMigrateFromChatId(@Nullable Integer migrateFromChatId) {
         this.migrateFromChatId = migrateFromChatId;
     }
 
+    /**
+     *
+     * @return Specified message was pinned.
+     */
     @Nullable
     public Message getPinnedMessage() {
         return pinnedMessage;
     }
 
+    /**
+     *
+     * @param pinnedMessage Specified message was pinned.
+     */
     public void setPinnedMessage(@Nullable Message pinnedMessage) {
         this.pinnedMessage = pinnedMessage;
     }
 
+    /**
+     *
+     * @return Message is an invoice for a payment, information about the invoice.
+     */
     @Nullable
     public Invoice getInvoice() {
         return invoice;
     }
 
+    /**
+     *
+     * @param invoice Message is an invoice for a payment, information about the invoice.
+     */
     public void setInvoice(@Nullable Invoice invoice) {
         this.invoice = invoice;
     }
 
+    /**
+     *
+     * @return Message is a service message about a successful payment, information about the payment.
+     */
     @Nullable
     public SuccessfulPayment getSuccessfulPayment() {
         return successfulPayment;
     }
 
+    /**
+     *
+     * @param successfulPayment Message is a service message about a successful payment, information about the payment.
+     */
     public void setSuccessfulPayment(@Nullable SuccessfulPayment successfulPayment) {
         this.successfulPayment = successfulPayment;
     }
 
+    /**
+     *
+     * @return The domain name of the website on which the user has logged in.
+     */
     @Nullable
     public String getConnectedWebsite() {
         return connectedWebsite;
     }
 
+    /**
+     *
+     * @param connectedWebsite The domain name of the website on which the user has logged in.
+     */
     public void setConnectedWebsite(@Nullable String connectedWebsite) {
         this.connectedWebsite = connectedWebsite;
     }
 
+    /**
+     *
+     * @return Telegram Passport data.
+     */
     @Nullable
     public PassportData getPassportData() {
         return passportData;
     }
 
+    /**
+     *
+     * @param passportData Telegram Passport data.
+     */
     public void setPassportData(@Nullable PassportData passportData) {
         this.passportData = passportData;
     }
 
+    /**
+     *
+     * @return Inline keyboard attached to the message.
+     */
     @Nullable
     public InlineKeyboardMarkup getReplyMarkup() {
         return replyMarkup;
     }
 
+    /**
+     *
+     * @param replyMarkup Inline keyboard attached to the message.
+     */
     public void setReplyMarkup(@Nullable InlineKeyboardMarkup replyMarkup) {
         this.replyMarkup = replyMarkup;
     }
@@ -798,13 +1171,13 @@ public class Message {
                 ", mediaGroupId='" + mediaGroupId + '\'' +
                 ", authorSignature='" + authorSignature + '\'' +
                 ", text='" + text + '\'' +
-                ", entities=" + (entities != null ?  String.join(",",entities.stream().map(MessageEntity::toString).collect(Collectors.toList())) : "") +
-                ", captionEntities=" + (captionEntities != null ?  String.join(",",captionEntities.stream().map(MessageEntity::toString).collect(Collectors.toList())) : "") +
+                ", entities=" + (entities != null ? entities.stream().map(MessageEntity::toString).collect(Collectors.joining(",")) : "") +
+                ", captionEntities=" + (captionEntities != null ? captionEntities.stream().map(MessageEntity::toString).collect(Collectors.joining(",")) : "") +
                 ", audio=" + (audio != null ? audio.toString() : "") +
                 ", document=" + (document != null ? document.toString() : "") +
                 ", animation=" + (animation != null ? animation.toString() : "") +
                 ", game=" + (game != null ? game.toString() : "") +
-                ", photo=" + (photo != null ?  String.join(",",photo.stream().map(PhotoSize::toString).collect(Collectors.toList())) : "") +
+                ", photo=" + (photo != null ? photo.stream().map(PhotoSize::toString).collect(Collectors.joining(",")) : "") +
                 ", sticker=" + (sticker != null ? sticker.toString() : "") +
                 ", video=" + (video != null ? video.toString() : "") +
                 ", voice=" + (voice != null ? voice.toString() : "") +
@@ -814,10 +1187,10 @@ public class Message {
                 ", location=" + (location != null ? location.toString() : "") +
                 ", venue=" + (venue != null ? venue.toString() : "") +
                 ", poll=" + (poll  != null ? poll.toString() : "") +
-                ", newChatMembers=" + (newChatMembers != null ?  String.join(",",newChatMembers.stream().map(User::toString).collect(Collectors.toList())) : "") +
+                ", newChatMembers=" + (newChatMembers != null ? newChatMembers.stream().map(User::toString).collect(Collectors.joining(",")) : "") +
                 ", leftChatMember=" + (leftChatMember != null ? leftChatMember.toString() : "") +
                 ", newChatTitle='" + newChatTitle + '\'' +
-                ", newChatPhoto=" + (newChatPhoto != null ?  String.join(",",newChatPhoto.stream().map(PhotoSize::toString).collect(Collectors.toList())) : "") +
+                ", newChatPhoto=" + (newChatPhoto != null ? newChatPhoto.stream().map(PhotoSize::toString).collect(Collectors.joining(",")) : "") +
                 ", deleteChatPhoto=" + deleteChatPhoto +
                 ", groupChatCreated=" + groupChatCreated +
                 ", supergroupChatCreated=" + supergroupChatCreated +

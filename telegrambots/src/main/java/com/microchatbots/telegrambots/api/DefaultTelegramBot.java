@@ -47,6 +47,11 @@ public class DefaultTelegramBot implements TelegramBot, AutoCloseable {
     private final TelegramBotClient telegramBotClient;
     private final String token;
 
+    /**
+     *
+     * @param token Bot's token
+     * @param telegramBotClient Telegram Bot Client
+     */
     public DefaultTelegramBot(String token,
                               TelegramBotClient telegramBotClient) {
         this.token = token;
@@ -54,6 +59,12 @@ public class DefaultTelegramBot implements TelegramBot, AutoCloseable {
         this.httpClient = null;
     }
 
+    /**
+     *
+     * @param token Bot's token
+     * @param url URL
+     * @throws MalformedURLException
+     */
     public DefaultTelegramBot(String token,
                               String url) throws MalformedURLException {
         this.token = token;
@@ -61,6 +72,11 @@ public class DefaultTelegramBot implements TelegramBot, AutoCloseable {
         this.httpClient = HttpClient.create(new URL(url));
     }
 
+    /**
+     *
+     * @param token Bot's Token
+     * @throws MalformedURLException when a Micronaut HTTP Client cannot be pointed to Telegrams' API
+     */
     public DefaultTelegramBot(String token) throws MalformedURLException  {
         this.token = token;
         this.telegramBotClient = null;
@@ -203,10 +219,18 @@ public class DefaultTelegramBot implements TelegramBot, AutoCloseable {
         }
     }
 
+    /**
+     *
+     * @return a Blocking Telegram Bot
+     */
     public BlockingTelegramBot toBlocking() {
         return new DefaultBlockingTelegramBot(getTelegramBotClient(), getHttpClient(), getToken());
     }
 
+    /**
+     *
+     * @return
+     */
     public HttpClient getHttpClient() {
         return httpClient;
     }

@@ -29,7 +29,7 @@ import javax.validation.constraints.Size;
 public class BotCommand {
 
     /**
-     * Text of the command
+     * Text of the command.
      */
     @NonNull
     @NotBlank
@@ -45,11 +45,19 @@ public class BotCommand {
     public BotCommand() {
     }
 
+    /**
+     *
+     * @return Text of the command
+     */
     @NonNull
     public String getCommand() {
         return command;
     }
 
+    /**
+     *
+     * @param command Text of the command
+     */
     public void setCommand(@NonNull String command) {
         this.command = command;
     }

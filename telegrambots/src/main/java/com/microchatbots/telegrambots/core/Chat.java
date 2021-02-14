@@ -40,7 +40,7 @@ public class Chat implements Serializable {
     private Integer id;
 
     /**
-     * Type of chat, can be either “private”, “group”, “supergroup” or “channel”
+     * Type of chat, can be either “private”, “group”, “supergroup” or “channel”.
      */
     @NonNull
     @NotNull
@@ -48,26 +48,26 @@ public class Chat implements Serializable {
     private String type;
 
     /**
-     * Title, for supergroups, channels and group chats
+     * Title, for supergroups, channels and group chats.
      */
     @Nullable
     private String title;
 
     /**
-     * Username, for private chats, supergroups and channels if available
+     * Username, for private chats, supergroups and channels if available.
      */
     @Nullable
     private String username;
 
     /**
-     * First name of the other party in a private chat
+     * First name of the other party in a private chat.
      */
     @JsonProperty("first_name")
     @Nullable
     private String firstName;
 
     /**
-     * Last name of the other party in a private chat
+     * Last name of the other party in a private chat.
      */
     @JsonProperty("last_name")
     @Nullable

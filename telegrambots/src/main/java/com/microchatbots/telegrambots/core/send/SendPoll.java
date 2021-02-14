@@ -37,7 +37,7 @@ public class SendPoll extends Send {
     private String question;
 
     /**
-     * List of answer options, 2-10 strings 1-100 characters each
+     * List of answer options, 2-10 strings 1-100 characters each.
      */
     @NonNull
     @NotNull
@@ -81,65 +81,121 @@ public class SendPoll extends Send {
         super("sendPoll");
     }
 
+    /**
+     *
+     * @return Poll question, 1-255 characters.
+     */
     @NonNull
     public String getQuestion() {
         return question;
     }
 
+    /**
+     *
+     * @param question Poll question, 1-255 characters.
+     */
     public void setQuestion(@NonNull String question) {
         this.question = question;
     }
 
+    /**
+     *
+     * @return List of answer options, 2-10 strings 1-100 characters each.
+     */
     @NonNull
     public List<String> getOptions() {
         return options;
     }
 
+    /**
+     *
+     * @param options List of answer options, 2-10 strings 1-100 characters each.
+     */
     public void setOptions(@NonNull List<String> options) {
         this.options = options;
     }
 
+    /**
+     *
+     * @return True, if the poll needs to be anonymous, defaults to True.
+     */
     @Nullable
     public Boolean getAnonymous() {
         return isAnonymous;
     }
 
+    /**
+     *
+     * @param anonymous True, if the poll needs to be anonymous, defaults to True.
+     */
     public void setAnonymous(@Nullable Boolean anonymous) {
         isAnonymous = anonymous;
     }
 
+    /**
+     *
+     * @return Poll type, “quiz” or “regular”, defaults to “regular”.
+     */
     @Nullable
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type Poll type, “quiz” or “regular”, defaults to “regular”.
+     */
     public void setType(@Nullable String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return True, if the poll allows multiple answers, ignored for polls in quiz mode, defaults to False.
+     */
     @Nullable
     public Boolean getAllowsMultipleAnswers() {
         return allowsMultipleAnswers;
     }
 
+    /**
+     *
+     * @param allowsMultipleAnswers True, if the poll allows multiple answers, ignored for polls in quiz mode, defaults to False.
+     */
     public void setAllowsMultipleAnswers(@Nullable Boolean allowsMultipleAnswers) {
         this.allowsMultipleAnswers = allowsMultipleAnswers;
     }
 
+    /**
+     *
+     * @return 0-based identifier of the correct answer option, required for polls in quiz mode.
+     */
     @Nullable
     public Integer getCorrectOptionId() {
         return correctOptionId;
     }
 
+    /**
+     *
+     * @param correctOptionId 0-based identifier of the correct answer option, required for polls in quiz mode.
+     */
     public void setCorrectOptionId(@Nullable Integer correctOptionId) {
         this.correctOptionId = correctOptionId;
     }
 
+    /**
+     *
+     * @return True if the poll needs to be immediately closed.
+     */
     @Nullable
     public Boolean getClosed() {
         return isClosed;
     }
 
+    /**
+     *
+     * @param closed Pass True, if the poll needs to be immediately closed.
+     */
     public void setClosed(@Nullable Boolean closed) {
         isClosed = closed;
     }

@@ -64,7 +64,6 @@ public interface TelegramBotApi {
                                       @NonNull @NotNull @Valid @Body GetUpdates getUpdates);
 
     //TODO add setwebhook https://core.telegram.org/bots/api#setwebhook
-
     Flowable<TelegramApiResponse> setWebhook(@PathVariable @NonNull @NotBlank String token,
                                @NonNull @NotNull @Valid @Body Webhook webhook);
 

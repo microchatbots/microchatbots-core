@@ -53,7 +53,6 @@ public abstract class Send {
     @JsonProperty("reply_to_message_id")
     private String replyToMessageId;
 
-
     /**
      * additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
      */
@@ -80,29 +79,53 @@ public abstract class Send {
         this.chatId = chatId;
     }
 
+    /**
+     *
+     * @return Whether the message should be send silently. Users will receive a notification with no sound.
+     */
     @Nullable
     public Boolean getDisableNotification() {
         return disableNotification;
     }
 
+    /**
+     *
+     * @param disableNotification true to sends the message silently. Users will receive a notification with no sound.
+     */
     public void setDisableNotification(@Nullable Boolean disableNotification) {
         this.disableNotification = disableNotification;
     }
 
+    /**
+     *
+     * @return If the message is a reply, ID of the original message.
+     */
     @Nullable
     public String getReplyToMessageId() {
         return replyToMessageId;
     }
 
+    /**
+     *
+     * @param replyToMessageId If the message is a reply, ID of the original message.
+     */
     public void setReplyToMessageId(@Nullable String replyToMessageId) {
         this.replyToMessageId = replyToMessageId;
     }
 
+    /**
+     *
+     * @return A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
+     */
     @Nullable
     public String getReplyMarkup() {
         return replyMarkup;
     }
 
+    /**
+     *
+     * @param replyMarkup A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
+     */
     public void setReplyMarkup(@Nullable String replyMarkup) {
         this.replyMarkup = replyMarkup;
     }

@@ -31,7 +31,7 @@ import javax.validation.constraints.NotBlank;
 public class ShippingAddress {
 
     /**
-     * ISO 3166-1 alpha-2 country code
+     * ISO 3166-1 alpha-2 country code.
      */
     @JsonProperty("country_code")
     @NonNull
@@ -39,14 +39,14 @@ public class ShippingAddress {
     private String countryCode;
 
     /**
-     * State, if applicable
+     * State, if applicable.
      */
     @NonNull
     @NotBlank
     private String state;
 
     /**
-     * City
+     * City.
      */
     @NonNull
     @NotBlank
@@ -61,7 +61,7 @@ public class ShippingAddress {
     private String streetLine1;
 
     /**
-     * Second line for the address
+     * Second line for the address.
      */
     @NonNull
     @NotBlank

@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PassportData {
     /**
-     * Array with information about documents and other Telegram Passport elements that was shared with the bot
+     * Array with information about documents and other Telegram Passport elements that was shared with the bot.
      */
     private List<EncryptedPassportElement> data;
 

@@ -26,7 +26,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
- * Contains information about the current status of a webhook
+ * Contains information about the current status of a webhook.
  * @see <a href="https://core.telegram.org/bots/api#webhookinfo">WebhookInfo</a>
  */
 @Introspected
@@ -71,14 +71,14 @@ public class WebhookInfo {
     private String lastErrorMessages;
 
     /**
-     * Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery
+     * Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery.
      */
     @JsonProperty("max_connections")
     @Nullable
     private Integer maxConnections;
 
     /**
-     * Array of String	Optional. A list of update types the bot is subscribed to. Defaults to all update types
+     * Array of String. Optional. A list of update types the bot is subscribed to. Defaults to all update types.
      */
     @JsonProperty("allowed_updates")
     @Nullable
@@ -87,65 +87,121 @@ public class WebhookInfo {
     public WebhookInfo() {
     }
 
+    /**
+     *
+     * @return Webhook URL, may be empty if webhook is not set up.
+     */
     @NonNull
     public String getUrl() {
         return url;
     }
 
+    /**
+     *
+     * @param url Webhook URL, may be empty if webhook is not set up.
+     */
     public void setUrl(@NonNull String url) {
         this.url = url;
     }
 
+    /**
+     *
+     * @return True, if a custom certificate was provided for webhook certificate checks.
+     */
     @NonNull
     public Boolean getHasCustomCertificate() {
         return hasCustomCertificate;
     }
 
+    /**
+     *
+     * @param hasCustomCertificate True, if a custom certificate was provided for webhook certificate checks.
+     */
     public void setHasCustomCertificate(@NonNull Boolean hasCustomCertificate) {
         this.hasCustomCertificate = hasCustomCertificate;
     }
 
+    /**
+     *
+     * @return Number of updates awaiting delivery.
+     */
     @NonNull
     public Integer getPendingUpdateCount() {
         return pendingUpdateCount;
     }
 
+    /**
+     *
+     * @param pendingUpdateCount Number of updates awaiting delivery.
+     */
     public void setPendingUpdateCount(@NonNull Integer pendingUpdateCount) {
         this.pendingUpdateCount = pendingUpdateCount;
     }
 
+    /**
+     *
+     * @return Unix time for the most recent error that happened when trying to deliver an update via webhook.
+     */
     @Nullable
     public Integer getLastErrorDate() {
         return lastErrorDate;
     }
 
+    /**
+     *
+     * @param lastErrorDate Unix time for the most recent error that happened when trying to deliver an update via webhook.
+     */
     public void setLastErrorDate(@Nullable Integer lastErrorDate) {
         this.lastErrorDate = lastErrorDate;
     }
 
+    /**
+     *
+     * @return Error message in human-readable format for the most recent error that happened when trying to deliver an update via webhook.
+     */
     @Nullable
     public String getLastErrorMessages() {
         return lastErrorMessages;
     }
 
+    /**
+     *
+     * @param lastErrorMessages Error message in human-readable format for the most recent error that happened when trying to deliver an update via webhook.
+     */
     public void setLastErrorMessages(@Nullable String lastErrorMessages) {
         this.lastErrorMessages = lastErrorMessages;
     }
 
+    /**
+     *
+     * @return Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery.
+     */
     @Nullable
     public Integer getMaxConnections() {
         return maxConnections;
     }
 
+    /**
+     *
+     * @param maxConnections Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery.
+     */
     public void setMaxConnections(@Nullable Integer maxConnections) {
         this.maxConnections = maxConnections;
     }
 
+    /**
+     *
+     * @return A list of update types the bot is subscribed to. Defaults to all update types.
+     */
     @Nullable
     public List<String> getAllowedUpdates() {
         return allowedUpdates;
     }
 
+    /**
+     *
+     * @param allowedUpdates A list of update types the bot is subscribed to. Defaults to all update types.
+     */
     public void setAllowedUpdates(@Nullable List<String> allowedUpdates) {
         this.allowedUpdates = allowedUpdates;
     }

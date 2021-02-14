@@ -65,20 +65,36 @@ public class SendVideoNote extends Send {
         super("sendVideoNote");
     }
 
+    /**
+     *
+     * @return Video note to send.
+     */
     @NonNull
     public String getVideoNote() {
         return videoNote;
     }
 
+    /**
+     *
+     * @param videoNote Video note to send.
+     */
     public void setVideoNote(@NonNull String videoNote) {
         this.videoNote = videoNote;
     }
 
+    /**
+     *
+     * @return Duration of sent video in seconds.
+     */
     @Nullable
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Duration of sent video in seconds.
+     */
     public void setDuration(@Nullable Integer duration) {
         this.duration = duration;
     }
@@ -92,21 +108,37 @@ public class SendVideoNote extends Send {
         this.length = length;
     }
 
+    /**
+     *
+     * @return Thumbnail of the file sent;
+     */
     @Nullable
     public String getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Thumbnail of the file sent;
+     */
     public void setThumb(@Nullable String thumb) {
         this.thumb = thumb;
     }
 
+    /**
+     *
+     * @return Sends the message silently.
+     */
     @Override
     @Nullable
     public Boolean getDisableNotification() {
         return disableNotification;
     }
 
+    /**
+     *
+     * @param disableNotification true to sends the message silently. Users will receive a notification with no sound.
+     */
     @Override
     public void setDisableNotification(@Nullable Boolean disableNotification) {
         this.disableNotification = disableNotification;

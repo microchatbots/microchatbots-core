@@ -33,22 +33,22 @@ import javax.validation.constraints.NotNull;
 public class PreCheckoutQuery {
 
     /**
-     * Unique query identifier
+     * Unique query identifier.
      */
     @NonNull
     @NotBlank
     private String id;
-    /**
-     * User who sent the query
-     */
 
+    /**
+     * User who sent the query.
+     */
     @NonNull
     @NotNull
     @Valid
     private User from;
 
     /**
-     * Three-letter ISO 4217 currency code
+     * Three-letter ISO 4217 currency code.
      */
     @NonNull
     @NotBlank
@@ -63,20 +63,22 @@ public class PreCheckoutQuery {
     private Integer totalAmount;
 
     /**
-     * Bot specified invoice payload
+     * Bot specified invoice payload.
      */
     @JsonProperty("invoice_payload")
     @NonNull
     @NotBlank
     private String invoicePayload;
+
     /**
-     * Identifier of the shipping option chosen by the user
+     * Identifier of the shipping option chosen by the user.
      */
     @Nullable
     @JsonProperty("shipping_option_id")
     private String shippingOptionId;
+
     /**
-     * Order info provided by the user
+     * Order info provided by the user.
      */
     @Nullable
     @Valid

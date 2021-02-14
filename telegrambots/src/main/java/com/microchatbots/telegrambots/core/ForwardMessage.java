@@ -70,11 +70,19 @@ public class ForwardMessage {
         this.chatId = chatId;
     }
 
+    /**
+     *
+     * @return Unique identifier for the chat where the original message was sent (or channel username in the format @channelusername).
+     */
     @NonNull
     public String getFromChatId() {
         return fromChatId;
     }
 
+    /**
+     *
+     * @param fromChatId Unique identifier for the chat where the original message was sent (or channel username in the format @channelusername).
+     */
     public void setFromChatId(@NonNull String fromChatId) {
         this.fromChatId = fromChatId;
     }
@@ -88,11 +96,19 @@ public class ForwardMessage {
         this.disableNotification = disableNotification;
     }
 
+    /**
+     *
+     * @return Unique message identifier inside this chat.
+     */
     @NonNull
     public Integer getMessageId() {
         return messageId;
     }
 
+    /**
+     *
+     * @param messageId Unique message identifier inside this chat.
+     */
     public void setMessageId(@NonNull Integer messageId) {
         this.messageId = messageId;
     }

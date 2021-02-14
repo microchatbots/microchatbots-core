@@ -36,20 +36,20 @@ public class OrderInfo {
     private String name;
 
     /**
-     * User's phone number
+     * User's phone number.
      */
     @Nullable
     @JsonProperty("phone_number")
     private String phoneNumber;
 
     /**
-     * User email
+     * User email.
      */
     @Nullable
     private String email;
 
     /**
-     *  User shipping address
+     *  User shipping address.
      */
     @Nullable
     @JsonProperty("shipping_address")

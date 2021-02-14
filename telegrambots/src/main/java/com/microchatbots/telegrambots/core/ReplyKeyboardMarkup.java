@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 public class ReplyKeyboardMarkup {
 
     /**
-     * Array of button rows, each represented by an Array of KeyboardButton objects
+     * Array of button rows, each represented by an Array of KeyboardButton objects.
      */
     @NonNull
     @NotNull

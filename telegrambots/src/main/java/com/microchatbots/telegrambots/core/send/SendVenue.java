@@ -31,25 +31,26 @@ import javax.validation.constraints.NotNull;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class SendVenue extends Send {
     /**
-     * Latitude of the venue
+     * Latitude of the venue.
      */
     @NonNull
     @NotNull
     private Float latitude;
 
     /**
-     * Longitude of the venue
+     * Longitude of the venue.
      */
     @NonNull
     @NotNull
     private Float longitude;
 
     /**
-     * Name of the venue
+     * Name of the venue.
      */
     @NonNull
     @NotBlank
     private String title;
+
     /**
      * Address of the venue.
      */
@@ -75,56 +76,104 @@ public class SendVenue extends Send {
         super("sendVenue");
     }
 
+    /**
+     *
+     * @return Latitude of the venue
+     */
     @NonNull
     public Float getLatitude() {
         return latitude;
     }
 
+    /**
+     *
+     * @param latitude Latitude of the venue
+     */
     public void setLatitude(@NonNull Float latitude) {
         this.latitude = latitude;
     }
 
+    /**
+     *
+     * @return Longitude of the venue
+     */
     @NonNull
     public Float getLongitude() {
         return longitude;
     }
 
+    /**
+     *
+     * @param longitude Longitude of the venue
+     */
     public void setLongitude(@NonNull Float longitude) {
         this.longitude = longitude;
     }
 
+    /**
+     *
+     * @return Name of the venue
+     */
     @NonNull
     public String getTitle() {
         return title;
     }
 
+    /**
+     *
+     * @param title Name of the venue
+     */
     public void setTitle(@NonNull String title) {
         this.title = title;
     }
 
+    /**
+     *
+     * @return Address of the venue.
+     */
     @NonNull
     public String getAddress() {
         return address;
     }
 
+    /**
+     *
+     * @param address Address of the venue.
+     */
     public void setAddress(@NonNull String address) {
         this.address = address;
     }
 
+    /**
+     *
+     * @return Foursquare identifier of the venue.
+     */
     @Nullable
     public String getFoursquareId() {
         return foursquareId;
     }
 
+    /**
+     *
+     * @param foursquareId Foursquare identifier of the venue.
+     */
     public void setFoursquareId(@Nullable String foursquareId) {
         this.foursquareId = foursquareId;
     }
 
+    /**
+     *
+     * @return Foursquare type of the venue
+     */
     @Nullable
     public String getFoursquareType() {
         return foursquareType;
     }
 
+    /**
+     *
+     * @param foursquareType Foursquare type of the venue
+     */
     public void setFoursquareType(@Nullable String foursquareType) {
         this.foursquareType = foursquareType;
     }

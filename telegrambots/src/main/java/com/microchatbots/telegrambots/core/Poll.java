@@ -35,21 +35,21 @@ import java.util.stream.Collectors;
 public class Poll {
 
     /**
-     * Unique poll identifier;
+     * Unique poll identifier.
      */
     @NonNull
     @NotBlank
     private String id;
 
     /**
-     * Poll question, 1-255 characters
+     * Poll question, 1-255 characters.
      */
     @NonNull
     @NotBlank
     private String question;
 
     /**
-     * List of poll options
+     * List of poll options.
      */
     @NonNull
     @NotNull
@@ -72,7 +72,7 @@ public class Poll {
     private Boolean isClosed;
 
     /**
-     * True, if the poll is anonymous
+     * True, if the poll is anonymous.
      */
     @JsonProperty("is_anonymous")
     @NonNull
@@ -80,7 +80,7 @@ public class Poll {
     private Boolean isAnonymous;
 
     /**
-     * type, currently can be “regular” or “quiz”
+     * type, currently can be “regular” or “quiz”.
      */
     @NonNull
     @NotBlank
@@ -88,7 +88,7 @@ public class Poll {
     private String typePoll;
 
     /**
-     * True, if the poll allows multiple answers
+     * True, if the poll allows multiple answers.
      */
     @JsonProperty("allows_multiple_answers")
     @NonNull

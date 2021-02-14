@@ -40,6 +40,12 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
     private static final Logger LOG = LoggerFactory.getLogger(TelegramParser.class);
     public static final String COMMAND_PREFIX = "/";
 
+    /**
+     *
+     * @param botConfiguration Bot's Configuration
+     * @param update Update
+     * @return parses space unique identifier
+     */
     @Override
     public Optional<Serializable> parseSpaceUniqueIdentifier(@NonNull @NotNull @Valid BotConfiguration botConfiguration,
                                                              @NonNull @NotNull @Valid Update update) {
@@ -53,22 +59,43 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
         return Optional.empty();
     }
 
+    /**
+     *
+     * @param botConfiguration Bot's Configuration
+     * @param update Update
+     * @return Parsed user unique identifier
+     */
     @Override
     public Optional<Serializable> parseUserUniqueIdentifier(@NonNull @NotNull @Valid BotConfiguration botConfiguration,
                                                             @NonNull @NotNull @Valid Update update) {
         return parseUser(update).map(User::getId);
     }
 
+    /**
+     *
+     * @param message Message
+     * @return User if could be parsed
+     */
     @NonNull
     public Optional<User> parseUser(@NonNull Message message) {
         return Optional.ofNullable(message.getFrom());
     }
 
+    /**
+     *
+     * @param message Message
+     * @return parses text from message
+     */
     @NonNull
     public Optional<String> parseText(@NonNull Message message) {
         return Optional.ofNullable(message.getText());
     }
 
+    /**
+     *
+     * @param update Update
+     * @return Parser the chat the update refers to
+     */
     public Optional<Chat> parseChat(@NonNull Update update) {
         if (update.getEditedMessage() != null) {
             return Optional.of(update.getEditedMessage().getChat());
@@ -85,6 +112,13 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
         return Optional.empty();
     }
 
+    /**
+     *
+     * @param botConfiguration Bot's configuraiton
+     * @param update Update
+     * @param excludeBotName Whether the bot name should be excluded from the parsed text
+     * @return The parsed text
+     */
     @Override
     public Optional<String> parseText(@NonNull @NotNull @Valid BotConfiguration botConfiguration,
                                       @NonNull @NotNull @Valid Update update,
@@ -105,6 +139,12 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
         return Optional.empty();
     }
 
+    /**
+     *
+     * @param botConfiguration Bot's Configuration
+     * @param update Update
+     * @return parsed command
+     */
     @Override
     public Optional<String> parserCommand(@NonNull @NotNull @Valid BotConfiguration botConfiguration,
                                           @NonNull @NotNull @Valid Update update) {
@@ -115,6 +155,11 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
         return parseCommand(text.get());
     }
 
+    /**
+     *
+     * @param text Text
+     * @return Parsed Command
+     */
     protected Optional<String> parseCommand(@NonNull String text) {
         if (LOG.isInfoEnabled()) {
             LOG.info("text parsed: {}", text);
@@ -131,6 +176,11 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
         return Optional.empty();
     }
 
+    /**
+     *
+     * @param update Update
+     * @return parsed text from update
+     */
     public Optional<String> parseText(@NonNull Update update) {
         if (update.getEditedMessage() != null) {
             return parseText(update.getEditedMessage());

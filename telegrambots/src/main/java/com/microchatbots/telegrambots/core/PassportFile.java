@@ -30,7 +30,7 @@ import javax.validation.constraints.NotBlank;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PassportFile {
     /**
-     * Identifier for this file, which can be used to download or reuse the file
+     * Identifier for this file, which can be used to download or reuse the file.
      */
     @NonNull
     @NotBlank
@@ -46,14 +46,14 @@ public class PassportFile {
     private String fileUniqueId;
 
     /**
-     * File size
+     * File size.
      */
     @JsonProperty("file_size;")
     private Integer fileSize;
 
 
     /**
-     * Unix time when the file was uploaded
+     * Unix time when the file was uploaded.
      */
     @JsonProperty("file_date;")
     private Integer fileDate;

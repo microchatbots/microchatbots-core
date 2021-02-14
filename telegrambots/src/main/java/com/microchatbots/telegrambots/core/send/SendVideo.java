@@ -19,7 +19,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import io.micronaut.core.annotation.Introspected;
-
 import edu.umd.cs.findbugs.annotations.Nullable;
 import javax.validation.constraints.NotBlank;
 
@@ -28,6 +27,7 @@ import javax.validation.constraints.NotBlank;
 public class SendVideo extends Send {
 
     public static final String SEND_VIDEO = "sendVideo";
+
     /**
      * Video to send. Pass a file_id as String to send a video that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a video from the Internet, or upload a new video using multipart/form-data.
      */
@@ -36,7 +36,7 @@ public class SendVideo extends Send {
     private String video;
 
     /**
-     * Duration of sent video in seconds
+     * Duration of sent video in seconds.
      */
     @Nullable
     private Integer duration;
@@ -73,7 +73,6 @@ public class SendVideo extends Send {
     @Nullable
     private String parseMode;
 
-
     /**
      * Pass True, if the uploaded video is suitable for streaming.
      */
@@ -85,74 +84,138 @@ public class SendVideo extends Send {
         super(SEND_VIDEO);
     }
 
+    /**
+     *
+     * @return Video to send. Pass a file_id as String to send a video that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a video from the Internet, or upload a new video using multipart/form-data.
+     */
     @NonNull
     public String getVideo() {
         return video;
     }
 
+    /**
+     *
+     * @param video Video to send. Pass a file_id as String to send a video that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a video from the Internet, or upload a new video using multipart/form-data.
+     */
     public void setVideo(@NonNull String video) {
         this.video = video;
     }
 
+    /**
+     *
+     * @return Duration of sent video in seconds.
+     */
     @Nullable
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Duration of sent video in seconds.
+     */
     public void setDuration(@Nullable Integer duration) {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return Video width.
+     */
     @Nullable
     public Integer getWidth() {
         return width;
     }
 
+    /**
+     *
+     * @param width Video width.
+     */
     public void setWidth(@Nullable Integer width) {
         this.width = width;
     }
 
+    /**
+     *
+     * @return Video height.
+     */
     @Nullable
     public Integer getHeight() {
         return height;
     }
 
+    /**
+     *
+     * @param height Video height.
+     */
     public void setHeight(@Nullable Integer height) {
         this.height = height;
     }
 
+    /**
+     *
+     * @return Thumbnail of the file sent
+     */
     @Nullable
     public String getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Thumbnail of the file sent
+     */
     public void setThumb(@Nullable String thumb) {
         this.thumb = thumb;
     }
 
+    /**
+     *
+     * @return Photo caption
+     */
     @Nullable
     public String getCaption() {
         return caption;
     }
 
+    /**
+     *
+     * @param caption Photo caption
+     */
     public void setCaption(@Nullable String caption) {
         this.caption = caption;
     }
 
+    /**
+     *
+     * @return Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     @Nullable
     public String getParseMode() {
         return parseMode;
     }
 
+    /**
+     *
+     * @param parseMode Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.
+     */
     public void setParseMode(@Nullable String parseMode) {
         this.parseMode = parseMode;
     }
 
+    /**
+     *
+     * @return Pass True, if the uploaded video is suitable for streaming.
+     */
     @Nullable
     public Boolean getSupportsStreaming() {
         return supportsStreaming;
     }
 
+    /**
+     *
+     * @param supportsStreaming Pass True, if the uploaded video is suitable for streaming.
+     */
     public void setSupportsStreaming(@Nullable Boolean supportsStreaming) {
         this.supportsStreaming = supportsStreaming;
     }

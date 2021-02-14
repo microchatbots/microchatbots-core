@@ -32,7 +32,6 @@ public abstract class SendMessageCommandHandler extends CommandHandler<TelegramB
         super(spaceParser, textParser);
     }
 
-
     protected abstract String getText(TelegramBotConfiguration telegramBotConfiguration, Update update);
 
     @Override

@@ -32,7 +32,7 @@ import javax.validation.constraints.NotNull;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ShippingQuery {
     /**
-     * Unique query identifier
+     * Unique query identifier.
      */
     @NonNull
     @NotBlank
@@ -47,7 +47,7 @@ public class ShippingQuery {
     private User from;
 
     /**
-     * Bot specified invoice payload
+     * Bot specified invoice payload.
      */
     @JsonProperty("invoice_payload")
     @NonNull
@@ -55,7 +55,7 @@ public class ShippingQuery {
     private String invoicePayload;
 
     /**
-     * User specified shipping address
+     * User specified shipping address.
      */
     @JsonProperty("shipping_address")
     @NonNull

@@ -33,34 +33,34 @@ import javax.validation.constraints.NotNull;
 public class MessageEntity {
 
     /**
-     * Type of the entity. Can be mention (@username), hashtag, cashtag, bot_command, url, email, phone_number, bold (bold text), italic (italic text), code (monowidth string), pre (monowidth block), text_link (for clickable text URLs), text_mention (for users without usernames)
+     * Type of the entity. Can be mention (@username), hashtag, cashtag, bot_command, url, email, phone_number, bold (bold text), italic (italic text), code (monowidth string), pre (monowidth block), text_link (for clickable text URLs), text_mention (for users without usernames).
      */
     @NonNull
     @NotBlank
     private String type;
 
     /**
-     * Offset in UTF-16 code units to the start of the entity
+     * Offset in UTF-16 code units to the start of the entity.
      */
     @NonNull
     @NotNull
     private Integer offset;
 
     /**
-     * Length of the entity in UTF-16 code units
+     * Length of the entity in UTF-16 code units.
      */
     @NonNull
     @NotNull
     private Integer length;
 
     /**
-     * For “text_link” only, url that will be opened after user taps on the text
+     * For “text_link” only, url that will be opened after user taps on the text.
      */
     @Nullable
     private String url;
 
     /**
-     * For “text_mention” only, the mentioned user
+     * For “text_mention” only, the mentioned user.
      */
     @Nullable
     @Valid

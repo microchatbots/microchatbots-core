@@ -34,7 +34,7 @@ import javax.validation.constraints.NotNull;
 public class Animation {
 
     /**
-     * Identifier for this file
+     * Identifier for this file.
      */
     @JsonProperty("file_id")
     @NonNull
@@ -50,28 +50,28 @@ public class Animation {
     private String fileUniqueId;
 
     /**
-     * Video width as defined by sender
+     * Video width as defined by sender.
      */
     @NonNull
     @NotNull
     private Integer	width;
 
     /**
-     * Video height as defined by sender
+     * Video height as defined by sender.
      */
     @NonNull
     @NotNull
     private Integer	height;
 
     /**
-     * Duration of the video in seconds as defined by sender
+     * Duration of the video in seconds as defined by sender.
      */
     @NonNull
     @NotNull
     private Integer	duration;
 
     /**
-     * Animation thumbnail as defined by sender;
+     * Animation thumbnail as defined by sender.
      */
     @Nullable
     @Valid
@@ -101,87 +101,158 @@ public class Animation {
     public Animation() {
     }
 
+    /**
+     *
+     * @return Identifier for this file.
+     */
     @NonNull
     public String getFileId() {
         return fileId;
     }
 
+    /**
+     *
+     * @param fileId Identifier for this file.
+     */
     public void setFileId(@NonNull String fileId) {
         this.fileId = fileId;
     }
 
+    /**
+     *
+     * @return Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     @NonNull
     public String getFileUniqueId() {
         return fileUniqueId;
     }
 
+    /**
+     *
+     * @param fileUniqueId Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file.
+     */
     public void setFileUniqueId(@NonNull String fileUniqueId) {
         this.fileUniqueId = fileUniqueId;
     }
 
+    /**
+     *
+     * @return Video width as defined by sender.
+     */
     @NonNull
     public Integer getWidth() {
         return width;
     }
 
+    /**
+     *
+     * @param width Video width as defined by sender.
+     */
     public void setWidth(@NonNull Integer width) {
         this.width = width;
     }
 
+    /**
+     *
+     * @return Video height as defined by sender.
+     */
     @NonNull
     public Integer getHeight() {
         return height;
     }
 
+    /**
+     *
+     * @param height Video height as defined by sender.
+     */
     public void setHeight(@NonNull Integer height) {
         this.height = height;
     }
 
+    /**
+     *
+     * @return Duration of the video in seconds as defined by sender.
+     */
     @NonNull
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     *
+     * @param duration Duration of the video in seconds as defined by sender.
+     */
     public void setDuration(@NonNull Integer duration) {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return Animation thumbnail as defined by sender.
+     */
     @Nullable
     public PhotoSize getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Animation thumbnail as defined by sender.
+     */
     public void setThumb(@Nullable PhotoSize thumb) {
         this.thumb = thumb;
     }
 
+    /**
+     *
+     * @return Original animation filename as defined by sender.
+     */
     @Nullable
     public String getFileName() {
         return fileName;
     }
 
+    /**
+     *
+     * @param fileName Original animation filename as defined by sender.
+     */
     public void setFileName(@Nullable String fileName) {
         this.fileName = fileName;
     }
 
+    /**
+     *
+     * @return MIME type of the file as defined by sender.
+     */
     @Nullable
     public String getMimeType() {
         return mimeType;
     }
 
+    /**
+     *
+     * @param mimeType MIME type of the file as defined by sender.
+     */
     public void setMimeType(@Nullable String mimeType) {
         this.mimeType = mimeType;
     }
 
+    /**
+     *
+     * @return File size.
+     */
     @Nullable
     public Integer getFileSize() {
         return fileSize;
     }
 
+    /**
+     *
+     * @param fileSize File size.
+     */
     public void setFileSize(@Nullable Integer fileSize) {
         this.fileSize = fileSize;
     }
-
 
     @Override
     public String toString() {
@@ -191,7 +262,7 @@ public class Animation {
                 ", width=" + width +
                 ", height=" + height +
                 ", duration=" + duration +
-                ", thumb=" + (thumb !=null ? thumb.toString() : "") +
+                ", thumb=" + (thumb != null ? thumb.toString() : "") +
                 ", fileName='" + fileName + '\'' +
                 ", mimeType='" + mimeType + '\'' +
                 ", fileSize=" + fileSize +
