@@ -37,8 +37,9 @@ import java.util.Optional;
 
 @Singleton
 public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, TextParser<Update> {
-    private static final Logger LOG = LoggerFactory.getLogger(TelegramParser.class);
     public static final String COMMAND_PREFIX = "/";
+
+    private static final Logger LOG = LoggerFactory.getLogger(TelegramParser.class);
 
     /**
      *
@@ -133,7 +134,7 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
         }
         String text = textOptional.get();
         if (botConfiguration instanceof TelegramBotConfiguration) {
-            String username =((TelegramBotConfiguration) botConfiguration).getAtUsername();
+            String username = ((TelegramBotConfiguration) botConfiguration).getAtUsername();
             return Optional.of(text.replaceAll(username, "").trim());
         }
         return Optional.empty();
@@ -165,7 +166,7 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
             LOG.info("text parsed: {}", text);
         }
         if (text.indexOf(StringUtils.SPACE) != -1) {
-            String[] arr = text.split(""+ StringUtils.SPACE);
+            String[] arr = text.split("" + StringUtils.SPACE);
             if (arr.length >= 1) {
                 text = arr[0];
             }
@@ -206,6 +207,11 @@ public class TelegramParser implements SpaceParser<Update>, UserParser<Update>, 
         return Optional.empty();
     }
 
+    /**
+     *
+     * @param update Update
+     * @return User
+     */
     @NonNull
     public Optional<User> parseUser(@NonNull Update update) {
         if (update.getEditedMessage() != null) {

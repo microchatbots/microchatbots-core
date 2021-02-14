@@ -261,7 +261,7 @@ public class Poll {
         return "Poll{" +
                 "id='" + id + '\'' +
                 ", question='" + question + '\'' +
-                ", options=" + (options != null ?  String.join(",",options.stream().map(PollOption::toString).collect(Collectors.toList())) : "") +
+                ", options=" + (options != null ? options.stream().map(PollOption::toString).collect(Collectors.joining(",")) : "") +
                 ", totalVoterCount=" + totalVoterCount +
                 ", isClosed=" + isClosed +
                 ", isAnonymous=" + isAnonymous +

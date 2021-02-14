@@ -40,6 +40,11 @@ public class TelegramBotCommandsHandlerFactory {
         this.textParser = textParser;
     }
 
+    /**
+     *
+     * @param telegramBotConfiguration Telegram's bot configuration
+     * @return Telegram Bot's commands handler
+     */
     @EachBean(TelegramBotConfiguration.class)
     @Singleton
     public TelegramBotCommandsHandler createCommandHandler(TelegramBotConfiguration telegramBotConfiguration) {

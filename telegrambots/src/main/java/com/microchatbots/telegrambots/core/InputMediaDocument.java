@@ -43,11 +43,19 @@ public class InputMediaDocument extends InputMedia {
         super(type);
     }
 
+    /**
+     *
+     * @return Thumbnail of the file sent
+     */
     @Nullable
     public String getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Thumbnail of the file sent
+     */
     public void setThumb(@Nullable String thumb) {
         this.thumb = thumb;
     }

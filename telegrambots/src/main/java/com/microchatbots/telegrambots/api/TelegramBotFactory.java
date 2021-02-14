@@ -27,6 +27,11 @@ public class TelegramBotFactory {
         this.telegramBotClient = telegramBotClient;
     }
 
+    /**
+     *
+     * @param telegramBotConfiguration Telegram's Bot configuration
+     * @return A bean of type {@link TelegramBot} for each bean of type {@link TelegramBotConfiguration}
+     */
     @EachBean(TelegramBotConfiguration.class)
     public TelegramBot createBot(TelegramBotConfiguration telegramBotConfiguration) {
         return new DefaultTelegramBot(telegramBotConfiguration.getToken(), telegramBotClient);

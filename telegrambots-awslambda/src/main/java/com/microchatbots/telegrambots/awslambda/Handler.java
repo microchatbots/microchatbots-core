@@ -37,21 +37,21 @@ import java.util.Optional;
 
 @Introspected
 public class Handler extends MicronautRequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
-    private static final Logger LOG = LoggerFactory.getLogger(Handler.class);
     public static final String PATH_START = "/";
     public static final String TOKEN = "token";
     public static final String APPLICATION_JSON = "application/json";
     public static final String CONTENT_TYPE = "Content-Type";
     public static final String TEXT_PLAIN = "text/plain";
+    private static final Logger LOG = LoggerFactory.getLogger(Handler.class);
 
     @Inject
-    private ObjectMapper objectMapper;
+    protected ObjectMapper objectMapper;
 
     @Inject
-    public TokenValidator tokenValidator;
+    protected TokenValidator tokenValidator;
 
     @Inject
-    public TelegramDispatcher dispatcher;
+    protected TelegramDispatcher dispatcher;
 
     @Override
     public APIGatewayProxyResponseEvent execute(APIGatewayProxyRequestEvent input) {

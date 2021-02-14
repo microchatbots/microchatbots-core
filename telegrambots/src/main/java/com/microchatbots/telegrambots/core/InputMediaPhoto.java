@@ -27,14 +27,13 @@ public class InputMediaPhoto extends InputMedia {
 
     public static final String TYPE_PHOTO = "photo";
 
-
     public InputMediaPhoto() {
         super(TYPE_PHOTO);
     }
 
     @Override
     public String toString() {
-        return "InputMediaPhoto{"+
+        return "InputMediaPhoto{" +
                 super.toString() +
                 "}";
     }

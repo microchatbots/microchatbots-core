@@ -138,6 +138,10 @@ public class Chat implements Serializable {
         return id;
     }
 
+    /**
+     *
+     * @param id Unique identifier for this chat.
+     */
     public void setId(@NonNull Integer id) {
         this.id = id;
     }

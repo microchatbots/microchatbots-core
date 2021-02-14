@@ -59,7 +59,6 @@ public interface TelegramBotApi {
         return sendMessage(token, message);
     }
 
-
     Flowable<List<Update>> getUpdates(@PathVariable @NonNull @NotBlank String token,
                                       @NonNull @NotNull @Valid @Body GetUpdates getUpdates);
 

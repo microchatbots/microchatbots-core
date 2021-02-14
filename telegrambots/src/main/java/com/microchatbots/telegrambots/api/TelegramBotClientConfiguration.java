@@ -31,12 +31,17 @@ public class TelegramBotClientConfiguration extends HttpClientConfiguration {
     public static final String PREFIX = TelegramConfigurationProperties.PREFIX + ".client";
     public static final String TELEGRAM_API = "https://api.telegram.org/";
 
-
     private final TelegramBotClientConfigurationConnectionPoolConfiguration connectionPoolConfiguration;
 
     @NonNull
     @NotBlank
     private String url = TELEGRAM_API;
+
+    public TelegramBotClientConfiguration(final ApplicationConfiguration applicationConfiguration,
+                                  final TelegramBotClientConfigurationConnectionPoolConfiguration connectionPoolConfiguration) {
+        super(applicationConfiguration);
+        this.connectionPoolConfiguration = connectionPoolConfiguration;
+    }
 
     /**
      *
@@ -54,12 +59,6 @@ public class TelegramBotClientConfiguration extends HttpClientConfiguration {
      */
     public void setUrl(@NonNull @NotBlank String url) {
         this.url = url;
-    }
-
-    public TelegramBotClientConfiguration(final ApplicationConfiguration applicationConfiguration,
-                                  final TelegramBotClientConfigurationConnectionPoolConfiguration connectionPoolConfiguration) {
-        super(applicationConfiguration);
-        this.connectionPoolConfiguration = connectionPoolConfiguration;
     }
 
     @Override

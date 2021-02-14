@@ -26,7 +26,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  * This object represents an incoming inline query. When the user sends an empty query, your bot could return some default or trending results.
- * @see ≤a href="https://core.telegram.org/bots/api#inlinequery">InlineQuery</a>
+ * @see <a href="https://core.telegram.org/bots/api#inlinequery">InlineQuery</a>
  */
 @Introspected
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -160,7 +160,7 @@ public class InlineQuery {
     public String toString() {
         return "InlineQuery{" +
                 "id='" + id + '\'' +
-                ", from=" + (from !=null ? from.toString() : "") +
+                ", from=" + (from != null ? from.toString() : "") +
                 ", location=" + (location != null ? location.toString() : "") +
                 ", query='" + query + '\'' +
                 ", offset='" + offset + '\'' +

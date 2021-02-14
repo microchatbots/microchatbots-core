@@ -45,7 +45,7 @@ public class SuccessfulPayment {
     @NonNull
     @NotNull
     @JsonProperty("total_amount")
-    private Integer	totalAmount;
+    private Integer totalAmount;
 
     /**
      * Bot specified invoice payload.

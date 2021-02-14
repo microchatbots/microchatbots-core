@@ -54,21 +54,21 @@ public class Animation {
      */
     @NonNull
     @NotNull
-    private Integer	width;
+    private Integer width;
 
     /**
      * Video height as defined by sender.
      */
     @NonNull
     @NotNull
-    private Integer	height;
+    private Integer height;
 
     /**
      * Duration of the video in seconds as defined by sender.
      */
     @NonNull
     @NotNull
-    private Integer	duration;
+    private Integer duration;
 
     /**
      * Animation thumbnail as defined by sender.
@@ -89,14 +89,14 @@ public class Animation {
      */
     @Nullable
     @JsonProperty("mime_type")
-    private String	mimeType;
+    private String mimeType;
 
     /**
      * File size.
      */
     @Nullable
     @JsonProperty("file_size")
-    private Integer	fileSize;
+    private Integer fileSize;
 
     public Animation() {
     }

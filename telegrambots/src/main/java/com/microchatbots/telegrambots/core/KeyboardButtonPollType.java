@@ -37,11 +37,19 @@ public class KeyboardButtonPollType {
     public KeyboardButtonPollType() {
     }
 
+    /**
+     *
+     * @return If quiz is passed, the user will be allowed to create only polls in the quiz mode. If regular is passed, only regular polls will be allowed. Otherwise, the user will be allowed to create a poll of any type.
+     */
     @Nullable
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type If quiz is passed, the user will be allowed to create only polls in the quiz mode. If regular is passed, only regular polls will be allowed. Otherwise, the user will be allowed to create a poll of any type.
+     */
     public void setType(@Nullable String type) {
         this.type = type;
     }

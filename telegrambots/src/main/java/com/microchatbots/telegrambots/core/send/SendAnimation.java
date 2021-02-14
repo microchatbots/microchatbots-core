@@ -36,7 +36,7 @@ public class SendAnimation extends Send {
     private String animation;
 
     /**
-     * Duration of sent video in seconds
+     * Duration of sent video in seconds.
      */
     @Nullable
     private Integer duration;
@@ -195,6 +195,4 @@ public class SendAnimation extends Send {
     public void setParseMode(@Nullable String parseMode) {
         this.parseMode = parseMode;
     }
-
-
 }

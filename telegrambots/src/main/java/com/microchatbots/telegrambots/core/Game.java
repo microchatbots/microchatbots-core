@@ -72,7 +72,7 @@ public class Game {
      * Animation that will be displayed in the game message in chats. Upload via BotFather.
      */
     @Nullable
-    Animation animation;
+    private Animation animation;
 
     public Game() {
     }
@@ -184,9 +184,9 @@ public class Game {
         return "Game{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", photo=" + (photo != null ? String.join(",", photo.stream().map(PhotoSize::toString).collect(Collectors.toList())) : "") +
+                ", photo=" + (photo != null ? photo.stream().map(PhotoSize::toString).collect(Collectors.joining(",")) : "") +
                 ", text='" + text +
-                ", textEntities=" + (textEntities != null ?  String.join(",",textEntities.stream().map(MessageEntity::toString).collect(Collectors.toList())) : "") +
+                ", textEntities=" + (textEntities != null ? textEntities.stream().map(MessageEntity::toString).collect(Collectors.joining(",")) : "") +
                 ", animation=" + animation +
                 '}';
     }

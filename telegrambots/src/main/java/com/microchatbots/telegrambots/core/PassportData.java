@@ -76,8 +76,8 @@ public class PassportData {
     @Override
     public String toString() {
         return "PassportData{" +
-                "data=" + (data != null ?  String.join(",",data.stream().map(EncryptedPassportElement::toString).collect(Collectors.toList())) : "") +
-                ", credentials=" + (credentials !=null ? credentials.toString() : "") +
+                "data=" + (data != null ? data.stream().map(EncryptedPassportElement::toString).collect(Collectors.joining(",")) : "") +
+                ", credentials=" + (credentials != null ? credentials.toString() : "") +
                 '}';
     }
 }

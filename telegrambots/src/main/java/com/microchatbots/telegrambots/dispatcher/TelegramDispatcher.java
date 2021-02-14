@@ -38,6 +38,12 @@ public class TelegramDispatcher {
         this.handlers = handlerCollection.stream().sorted(OrderUtil.COMPARATOR).collect(Collectors.toList());
     }
 
+    /**
+     *
+     * @param botConfiguration Telegram's bot configuration
+     * @param update Update
+     * @return An optional response
+     */
     public Optional<?> dispatch(@NonNull @NotNull @Valid TelegramBotConfiguration botConfiguration,
                                 @NonNull @NotNull @Valid Update update) {
         for (TelegramRequestHandler<?> handler : handlers) {
@@ -46,6 +52,5 @@ public class TelegramDispatcher {
             }
         }
         return Optional.empty();
-
     }
 }

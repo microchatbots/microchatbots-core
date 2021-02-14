@@ -60,7 +60,6 @@ public class SendVideoNote extends Send {
     @Nullable
     private Boolean disableNotification;
 
-
     public SendVideoNote() {
         super("sendVideoNote");
     }
@@ -99,11 +98,19 @@ public class SendVideoNote extends Send {
         this.duration = duration;
     }
 
+    /**
+     *
+     * @return Video width and height, i.e. diameter of the video message.
+     */
     @Nullable
     public Integer getLength() {
         return length;
     }
 
+    /**
+     *
+     * @param length Video width and height, i.e. diameter of the video message.
+     */
     public void setLength(@Nullable Integer length) {
         this.length = length;
     }

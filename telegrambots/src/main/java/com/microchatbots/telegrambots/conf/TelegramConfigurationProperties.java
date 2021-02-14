@@ -22,10 +22,18 @@ public class TelegramConfigurationProperties implements TelegramConfiguration {
 
     private boolean changeCommands;
 
+    /**
+     *
+     * @param changeCommands Change commands
+     */
     public void setChangeCommands(boolean changeCommands) {
         this.changeCommands = changeCommands;
     }
 
+    /**
+     *
+     * @return Change commands
+     */
     @Override
     public boolean getChangeCommands() {
         return changeCommands;

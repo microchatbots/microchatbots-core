@@ -24,11 +24,10 @@ import com.microchatbots.telegrambots.core.send.ParseMode;
 import com.microchatbots.telegrambots.core.send.SendMessage;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import io.micronaut.core.io.ResourceLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Serializable;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.Optional;
@@ -39,6 +38,7 @@ public class TelegramBotCommandsHandler implements TelegramRequestHandler<SendMe
     public static final String CLASSPATH = "classpath:";
     public static final String MARKDOWN_EXTENSION = ".md";
 
+    private static final Logger LOG = LoggerFactory.getLogger(TelegramBotCommandsHandler.class);
     private final TextParser<Update> textParser;
     private final SpaceParser<Update> spaceParser;
     private final Map<String, String> markdown = new ConcurrentHashMap<>();
@@ -48,14 +48,26 @@ public class TelegramBotCommandsHandler implements TelegramRequestHandler<SendMe
                                       SpaceParser<Update> spaceParser,
                                       TextParser<Update> textParser) {
         for (BotCommand botCommand : telegramBotConfiguration.getBotCommands()) {
-            resourceLoader.getResourceAsStream(CLASSPATH + botCommand.getCommand() + MARKDOWN_EXTENSION).ifPresent(inputStream -> {
-                markdown.put(botCommand.getCommand(), readMarkdown(inputStream));
-            });
+            Optional<InputStream> inputStreamOptional = resourceLoader.getResourceAsStream(CLASSPATH + botCommand.getCommand() + MARKDOWN_EXTENSION);
+            if (inputStreamOptional.isPresent()) {
+                try {
+                    InputStream inputStream = inputStreamOptional.get();
+                    markdown.put(botCommand.getCommand(), readMarkdown(inputStream));
+                    inputStream.close();
+                } catch (IOException e) {
+                    LOG.warn("IO Exception reading markdown", e);
+                }
+            }
         }
         this.spaceParser = spaceParser;
         this.textParser = textParser;
     }
 
+    /**
+     *
+     * @param inputStream InputStream
+     * @return Markdown
+     */
     protected String readMarkdown(@NonNull InputStream inputStream) {
         return new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))
                 .lines()

@@ -30,7 +30,7 @@ import javax.validation.constraints.NotBlank;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class SendMessage extends Send {
 
-    public final static String METHOD_SENDMESSAGE = "sendMessage";
+    public static final String METHOD_SENDMESSAGE = "sendMessage";
 
     /**
      * Text of the message to be sent.

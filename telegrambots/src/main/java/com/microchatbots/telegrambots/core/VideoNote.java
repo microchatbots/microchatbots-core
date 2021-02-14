@@ -61,7 +61,7 @@ public class VideoNote {
      */
     @NonNull
     @NotNull
-    private Integer	duration;
+    private Integer duration;
 
     /**
      * Video thumbnail.
@@ -75,7 +75,7 @@ public class VideoNote {
      */
     @Nullable
     @JsonProperty("file_size")
-    private Integer	fileSize;
+    private Integer fileSize;
 
     public VideoNote() {
 

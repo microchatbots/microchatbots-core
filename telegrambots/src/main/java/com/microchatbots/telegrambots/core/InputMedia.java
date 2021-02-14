@@ -49,7 +49,7 @@ public abstract class InputMedia {
     private String media;
 
     /**
-     * Caption of the audio to be sent, 0-1024 characters
+     * Caption of the audio to be sent, 0-1024 characters.
      */
     @Nullable
     private String caption;

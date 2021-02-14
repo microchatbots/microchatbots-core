@@ -32,7 +32,7 @@ import javax.validation.constraints.NotNull;
 public class ForceReply {
 
     /**
-     * Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply'
+     * Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply'.
      */
     @NonNull
     @NotNull
@@ -48,20 +48,36 @@ public class ForceReply {
     public ForceReply() {
     }
 
+    /**
+     *
+     * @return Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply'.
+     */
     @NonNull
     public Boolean getForceReply() {
         return forceReply;
     }
 
+    /**
+     *
+     * @param forceReply Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply'.
+     */
     public void setForceReply(@NonNull Boolean forceReply) {
         this.forceReply = forceReply;
     }
 
+    /**
+     *
+     * @return Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
+     */
     @Nullable
     public Boolean getSelective() {
         return selective;
     }
 
+    /**
+     *
+     * @param selective Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.
+     */
     public void setSelective(@Nullable Boolean selective) {
         this.selective = selective;
     }

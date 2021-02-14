@@ -42,11 +42,19 @@ public class InlineKeyboardMarkup {
     public InlineKeyboardMarkup() {
     }
 
+    /**
+     *
+     * @return Array of button rows, each represented by an Array of InlineKeyboardButton objects.
+     */
     @NonNull
     public List<List<InlineKeyboardButton>>  getInlineKeyboard() {
         return inlineKeyboard;
     }
 
+    /**
+     *
+     * @param inlineKeyboard Array of button rows, each represented by an Array of InlineKeyboardButton objects.
+     */
     public void setInlineKeyboard(@NonNull List<List<InlineKeyboardButton>>  inlineKeyboard) {
         this.inlineKeyboard = inlineKeyboard;
     }
@@ -54,7 +62,7 @@ public class InlineKeyboardMarkup {
     @Override
     public String toString() {
         return "InlineKeyboardMarkup{" +
-                "inlineKeyboard=" + (inlineKeyboard != null ? String.join(",", inlineKeyboard.stream().map(keyboard -> String.join(",", keyboard.stream().map(InlineKeyboardButton::toString).collect(Collectors.toList()))).collect(Collectors.toList())) : "") +
+                "inlineKeyboard=" + (inlineKeyboard != null ? inlineKeyboard.stream().map(keyboard -> keyboard.stream().map(InlineKeyboardButton::toString).collect(Collectors.joining(","))).collect(Collectors.joining(",")) : "") +
                 '}';
     }
 }

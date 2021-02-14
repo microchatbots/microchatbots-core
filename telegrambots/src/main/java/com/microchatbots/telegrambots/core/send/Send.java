@@ -29,7 +29,7 @@ public abstract class Send {
     protected final String method;
 
     /**
-     * Unique identifier for the target chat or username of the target channel (in the format @channelusername)
+     * Unique identifier for the target chat or username of the target channel (in the format @channelusername).
      * Integer or String
      */
     @JsonProperty("chat_id")
@@ -65,16 +65,28 @@ public abstract class Send {
         this.method = method;
     }
 
+    /**
+     *
+     * @return Send method
+     */
     @NonNull
     public String getMethod() {
         return method;
     }
 
+    /**
+     *
+     * @return  Unique identifier for the target chat or username of the target channel (in the format @channelusername)
+     */
     @NonNull
     public Object getChatId() {
         return chatId;
     }
 
+    /**
+     *
+     * @param chatId  Unique identifier for the target chat or username of the target channel (in the format @channelusername)
+     */
     public void setChatId(@NonNull Object chatId) {
         this.chatId = chatId;
     }

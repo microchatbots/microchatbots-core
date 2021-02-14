@@ -78,7 +78,7 @@ public class EncryptedPassportElement {
     private PassportFile reverseSide;
 
     /**
-     * 	Optional. Encrypted file with the selfie of the user holding a document, provided by the user; available for “passport”, “driver_license”, “identity_card” and “internal_passport”. The file can be decrypted and verified using the accompanying EncryptedCredentials.
+     * Optional. Encrypted file with the selfie of the user holding a document, provided by the user; available for “passport”, “driver_license”, “identity_card” and “internal_passport”. The file can be decrypted and verified using the accompanying EncryptedCredentials.
      */
     @Nullable
     private PassportFile selfie;
@@ -87,7 +87,7 @@ public class EncryptedPassportElement {
      * Array of encrypted files with translated versions of documents provided by the user. Available if requested for “passport”, “driver_license”, “identity_card”, “internal_passport”, “utility_bill”, “bank_statement”, “rental_agreement”, “passport_registration” and “temporary_registration” types. Files can be decrypted and verified using the accompanying EncryptedCredentials.
      */
     @Nullable
-    List<PassportFile> translation;
+    private List<PassportFile> translation;
 
     /**
      * Base64-encoded element hash for using in PassportElementErrorUnspecified.
@@ -277,11 +277,11 @@ public class EncryptedPassportElement {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", files=" + files +
-                ", files=" + (files != null ?  String.join(",",files.stream().map(PassportFile::toString).collect(Collectors.toList())) : "") +
+                ", files=" + (files != null ? files.stream().map(PassportFile::toString).collect(Collectors.joining(",")) : "") +
                 ", frontSide=" + (frontSide != null ? frontSide.toString() : "") +
                 ", reverseSide=" + (reverseSide != null ? reverseSide.toString() : "") +
                 ", selfie=" + (selfie != null ? selfie.toString() : "") +
-                ", translation=" + (translation != null ?  String.join(",",translation.stream().map(PassportFile::toString).collect(Collectors.toList())) : "") +
+                ", translation=" + (translation != null ? translation.stream().map(PassportFile::toString).collect(Collectors.joining(",")) : "") +
 
                 ", hash='" + hash + '\'' +
                 '}';

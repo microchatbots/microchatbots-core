@@ -38,7 +38,7 @@ public class PollOption {
     private String text;
 
     /**
-     * Number of users that voted for this option
+     * Number of users that voted for this option.
      */
     @JsonProperty("voter_count")
     @NonNull

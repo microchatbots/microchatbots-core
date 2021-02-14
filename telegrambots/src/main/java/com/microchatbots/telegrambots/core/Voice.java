@@ -32,7 +32,7 @@ import javax.validation.constraints.NotNull;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Voice {
     /**
-     * 	Identifier for this file.
+     * Identifier for this file.
      */
     @JsonProperty("file_id")
     @NonNull
@@ -52,7 +52,7 @@ public class Voice {
      */
     @NonNull
     @NotNull
-    private Integer	duration;
+    private Integer duration;
 
     /**
      * MIME type of the file as defined by sender.
@@ -66,7 +66,7 @@ public class Voice {
      */
     @Nullable
     @JsonProperty("file_size")
-    private Integer	fileSize;
+    private Integer fileSize;
 
     public Voice() {
     }

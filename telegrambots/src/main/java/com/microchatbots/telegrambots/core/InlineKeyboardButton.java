@@ -39,7 +39,7 @@ public class InlineKeyboardButton {
     private String text;
 
     /**
-     * HTTP or tg:// url to be opened when button is pressed
+     * HTTP or tg:// url to be opened when button is pressed.
      */
     @Nullable
     private String url;

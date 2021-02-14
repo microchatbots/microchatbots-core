@@ -62,11 +62,19 @@ public class BotCommand {
         this.command = command;
     }
 
+    /**
+     *
+     * @return Bot command description
+     */
     @NonNull
     public String getDescription() {
         return description;
     }
 
+    /**
+     *
+     * @param description Bot command description
+     */
     public void setDescription(@NonNull String description) {
         this.description = description;
     }

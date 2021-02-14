@@ -135,7 +135,7 @@ public class ReplyKeyboardMarkup {
     @Override
     public String toString() {
         return "ReplyKeyboardMarkup{" +
-                "keyboard=" + (keyboard != null ?  String.join(",",keyboard.stream().map(KeyboardButton::toString).collect(Collectors.toList())) : "") +
+                "keyboard=" + (keyboard != null ? keyboard.stream().map(KeyboardButton::toString).collect(Collectors.joining(",")) : "") +
                 ", resizeKeyboard=" + resizeKeyboard +
                 ", oneTimeKeyboard=" + oneTimeKeyboard +
                 ", selective=" + selective +

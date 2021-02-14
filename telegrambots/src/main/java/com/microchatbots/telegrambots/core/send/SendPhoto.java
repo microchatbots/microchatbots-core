@@ -51,7 +51,6 @@ public class SendPhoto extends Send {
     @Nullable
     private String parseMode;
 
-
     public SendPhoto() {
         super(SEND_PHOTO);
     }

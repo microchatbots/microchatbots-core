@@ -45,22 +45,24 @@ public class Function extends AzureFunction {
     public static final String TEXT_PLAIN = "text/plain";
 
     @Inject
-    private ObjectMapper objectMapper;
+    protected ObjectMapper objectMapper;
 
     @Inject
-    public TokenValidator tokenValidator;
+    protected TokenValidator tokenValidator;
 
     @Inject
-    public TelegramDispatcher dispatcher;
+    protected TelegramDispatcher dispatcher;
 
+    /**
+     *
+     * @param request Request
+     * @param token Token
+     * @param context Context
+     * @return HTTP Response message
+     */
     @FunctionName("Webhook")
-    public HttpResponseMessage webhook(
-            @HttpTrigger(name = "req",
-                    methods = {HttpMethod.POST},
-                    authLevel = AuthorizationLevel.ANONYMOUS,
-                    route = "{token}")
-                    HttpRequestMessage<Optional<String>> request,
-                    @BindingName("token") String token,
+    public HttpResponseMessage webhook(@HttpTrigger(name = "req", methods = {HttpMethod.POST}, authLevel = AuthorizationLevel.ANONYMOUS, route = "{token}") HttpRequestMessage<Optional<String>> request,
+            @BindingName("token") String token,
             ExecutionContext context) {
         if (context != null) {
             context.getLogger().info("Executing Function: " + getClass().getName());

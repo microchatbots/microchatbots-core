@@ -34,6 +34,7 @@ import java.util.concurrent.ExecutorService;
 @Context
 public class ChangeCommands {
     private static final Logger LOG = LoggerFactory.getLogger(ChangeCommands.class);
+
     public ChangeCommands(@Named(TaskExecutors.IO) ExecutorService executorService,
                           TelegramBotClient telegramBotClient,
                           List<TelegramBotConfiguration> telegramBotConfigurations) {

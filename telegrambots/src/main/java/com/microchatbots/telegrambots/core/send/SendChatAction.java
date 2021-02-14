@@ -36,11 +36,19 @@ public class SendChatAction extends Send {
         super("sendChatAction");
     }
 
+    /**
+     *
+     * @return Type of action to broadcast
+     */
     @NonNull
     public String getAction() {
         return action;
     }
 
+    /**
+     *
+     * @param action Type of action to broadcast
+     */
     public void setAction(@NonNull String action) {
         this.action = action;
     }

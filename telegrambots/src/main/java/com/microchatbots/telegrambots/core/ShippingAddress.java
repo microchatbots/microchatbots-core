@@ -181,7 +181,6 @@ public class ShippingAddress {
         this.postCode = postCode;
     }
 
-
     @Override
     public String toString() {
         return "ShippingAddress{" +

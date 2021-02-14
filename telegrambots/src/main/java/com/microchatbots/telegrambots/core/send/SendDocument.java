@@ -54,7 +54,6 @@ public class SendDocument extends Send {
     @Nullable
     private String parseMode;
 
-
     public SendDocument() {
         super("sendDocument");
     }
@@ -76,11 +75,19 @@ public class SendDocument extends Send {
         this.document = document;
     }
 
+    /**
+     *
+     * @return Thumbnail of the file sent
+     */
     @Nullable
     public String getThumb() {
         return thumb;
     }
 
+    /**
+     *
+     * @param thumb Thumbnail of the file sent
+     */
     public void setThumb(@Nullable String thumb) {
         this.thumb = thumb;
     }

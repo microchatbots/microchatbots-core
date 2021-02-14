@@ -48,20 +48,36 @@ public class TelegramBotConfigurationProperties implements TelegramBotConfigurat
         this.name = name;
     }
 
+    /**
+     *
+     * @return Commands
+     */
     @NonNull
     public Map<String, String> getCommands() {
         return commands;
     }
 
+    /**
+     *
+     * @param commands Commands
+     */
     public void setCommands(@NonNull Map<String, String> commands) {
         this.commands = commands;
     }
 
+    /**
+     *
+     * @return bot username prefixed with @
+     */
     @NonNull
     public String getAtUsername() {
         return atUsername;
     }
 
+    /**
+     *
+     * @return List of bot commands
+     */
     @NonNull
     @Override
     public List<BotCommand> getBotCommands() {
@@ -75,16 +91,28 @@ public class TelegramBotConfigurationProperties implements TelegramBotConfigurat
         return botCommands;
     }
 
+    /**
+     *
+     * @param atUsername bot username prefixed with @
+     */
     public void setAtUsername(@NonNull String atUsername) {
         this.atUsername = atUsername;
     }
 
+    /**
+     *
+     * @return Telegram's token
+     */
     @NonNull
     @Override
     public String getToken() {
         return token;
     }
 
+    /**
+     *
+     * @param token Telegram's token
+     */
     public void setToken(@NonNull String token) {
         this.token = token;
     }

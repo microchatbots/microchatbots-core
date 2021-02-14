@@ -229,16 +229,24 @@ public class DefaultTelegramBot implements TelegramBot, AutoCloseable {
 
     /**
      *
-     * @return
+     * @return HttpClient
      */
     public HttpClient getHttpClient() {
         return httpClient;
     }
 
+    /**
+     *
+     * @return Telegram Bot client
+     */
     public TelegramBotClient getTelegramBotClient() {
         return telegramBotClient;
     }
 
+    /**
+     *
+     * @return Telegram's token
+     */
     public String getToken() {
         return token;
     }
