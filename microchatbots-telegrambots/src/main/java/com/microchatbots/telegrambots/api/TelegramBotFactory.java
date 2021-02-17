@@ -48,11 +48,6 @@ public class TelegramBotFactory {
      */
     @EachBean(TelegramBotConfiguration.class)
     public BlockingTelegramBot createBlockingBot(TelegramBotConfiguration telegramBotConfiguration) {
-        try {
-            return new DefaultBlockingTelegramBot(telegramBotConfiguration.getToken());
-        } catch (MalformedURLException e) {
-            LOG.warn("Malformed URL Exception thrown trying to instantiate a blocking telegram bot");
-        }
-        return null;
+        return new DefaultBlockingTelegramBot(telegramBotConfiguration.getToken(), telegramBotClient);
     }
 }
