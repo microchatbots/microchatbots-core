@@ -7,7 +7,7 @@ plugins {
 
 ext {
     micronautVersion = new File("${projectDir}/../version.txt").text
-    isReleaseVersion = !version.endsWith("SNAPSHOT")
+    isReleaseVersion = !projectVersion.endsWith("SNAPSHOT")
 }
 
 group 'com.microchatbots'
