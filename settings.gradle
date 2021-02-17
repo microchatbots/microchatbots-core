@@ -11,8 +11,8 @@ gradleEnterprise {
 
 rootProject.name = 'microchatbots'
 
-include 'basecamp'
-include 'chatbots'
-include 'telegrambots'
-include 'telegrambots-awslambda'
-include 'telegrambots-azure'
+include 'microchatbots-basecamp'
+include 'microchatbots-chatbots'
+include 'microchatbots-telegrambots'
+include 'microchatbots-telegrambots-awslambda'
+include 'microchatbots-telegrambots-azure'

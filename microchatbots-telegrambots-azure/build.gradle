@@ -1,0 +1,10 @@
+plugins {
+    id 'microchatbots.java-library-conventions'
+    id "com.diffplug.spotless" version "5.0.0"
+}
+
+dependencies {
+    api("com.microsoft.azure.functions:azure-functions-java-library")
+    api("io.micronaut.azure:micronaut-azure-function")
+    api project(":microchatbots-telegrambots")
+}

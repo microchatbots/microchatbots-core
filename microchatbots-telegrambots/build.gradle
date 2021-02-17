@@ -1,0 +1,11 @@
+plugins {
+    id 'microchatbots.java-library-conventions'
+    id "com.diffplug.spotless" version "5.0.0"
+}
+
+dependencies {
+    api "io.micronaut:micronaut-http-client"
+    api "com.fasterxml.jackson.core:jackson-annotations"
+    api "io.micronaut:micronaut-inject"
+    api project(":microchatbots-chatbots")
+}

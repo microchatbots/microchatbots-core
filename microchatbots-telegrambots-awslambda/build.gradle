@@ -1,0 +1,10 @@
+plugins {
+    id 'microchatbots.java-library-conventions'
+    id "com.diffplug.spotless" version "5.0.0"
+}
+
+dependencies {
+    api("io.micronaut.aws:micronaut-function-aws")
+    api("com.amazonaws:aws-lambda-java-events:3.7.0")
+    api project(":microchatbots-telegrambots")
+}
