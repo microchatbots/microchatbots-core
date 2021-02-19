@@ -20,8 +20,6 @@ import io.micronaut.context.annotation.Factory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.net.MalformedURLException;
-
 @Factory
 public class TelegramBotFactory {
     private static final Logger LOG = LoggerFactory.getLogger(TelegramBotFactory.class);
