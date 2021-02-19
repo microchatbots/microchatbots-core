@@ -104,6 +104,8 @@ afterEvaluate {
         tasks.named('generateMetadataFileForMavenJavaPublication') { it.enabled = false }
         tasks.named('generatePomFileForMavenJavaPublication') { it.enabled = false }
         tasks.named('publishMavenJavaPublicationToMavenLocal') { it.enabled = false }
+        tasks.named('signMavenJavaPublication') { it.enabled = false }
+        tasks.named('publishMavenJavaPublicationToMavenRepository') {it.enabled = false }
         tasks.named('publishToMavenLocal') { it.enabled = false }
         tasks.named('publish') { it.enabled = false }
     }
