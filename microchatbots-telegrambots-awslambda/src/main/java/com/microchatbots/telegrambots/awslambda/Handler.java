@@ -24,6 +24,7 @@ import com.microchatbots.telegrambots.conf.TokenValidator;
 import com.microchatbots.telegrambots.core.Update;
 import com.microchatbots.telegrambots.core.send.Send;
 import com.microchatbots.telegrambots.dispatcher.TelegramDispatcher;
+import io.micronaut.context.ApplicationContext;
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.function.aws.MicronautRequestHandler;
 import io.micronaut.http.HttpStatus;
@@ -52,6 +53,21 @@ public class Handler extends MicronautRequestHandler<APIGatewayProxyRequestEvent
 
     @Inject
     protected TelegramDispatcher dispatcher;
+
+    /**
+     * Default constructor; will initialize a suitable {@link ApplicationContext} for Lambda deployment.
+     */
+    public Handler() {
+        super();
+    }
+
+    /**
+     * Constructor used to inject a preexisting {@link ApplicationContext}.
+     * @param applicationContext the application context
+     */
+    public Handler(ApplicationContext applicationContext) {
+        super(applicationContext);
+    }
 
     @Override
     public APIGatewayProxyResponseEvent execute(APIGatewayProxyRequestEvent input) {
